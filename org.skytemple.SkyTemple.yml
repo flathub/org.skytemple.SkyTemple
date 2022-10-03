@@ -1,6 +1,6 @@
 app-id: org.skytemple.SkyTemple
 runtime: org.gnome.Platform
-runtime-version: '42'
+runtime-version: '43'
 sdk: org.gnome.Sdk
 command: run.sh
 finish-args:
@@ -12,7 +12,7 @@ finish-args:
   - "--filesystem=xdg-run/app/com.discordapp.Discord:create"
   - "--filesystem=xdg-run/discord-ipc-0:create"
 sdk-extensions:
-  - org.freedesktop.Sdk.Extension.rust-nightly
+  - org.freedesktop.Sdk.Extension.rust-stable
 cleanup:  # todo
   - /bin/pcap-config
   - /include
@@ -38,7 +38,7 @@ modules:
   - name: python3-skytemple-rust
     buildsystem: simple
     build-commands:
-      - . /usr/lib/sdk/rust-nightly/enable.sh && pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "./skytemple-rust"
+      - . /usr/lib/sdk/rust-stable/enable.sh && pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "./skytemple-rust"
     build-options:
       env:
         CARGO_HOME: /run/build/python3-skytemple-rust/cargo
@@ -59,11 +59,9 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/d9/5f/2daccd14278b6b780ae6799f85998377c06019354982391245f4b58a927d/setuptools-65.3.0-py3-none-any.whl
         sha256: 2e24e0bec025f035a2e72cdd1961119f557d78ad331bb00ff82efb2ab8da8e82
-      # At the moment there is a packaging issue with the source on PyPi: The macro subcrates are not contained in the source tarballs.
-      # We need to fix this upstream, but in the meantime we use the Git repo.
       - type: git
         url: https://github.com/SkyTemple/skytemple-rust.git
-        tag: 1.3.7
+        tag: 1.4.0
         dest: skytemple-rust
       - type: file
         url: https://files.pythonhosted.org/packages/5b/76/6ebf4728d287527514b29bc92c14ec59f666f43b0af650df6c100614c3dc/setuptools_rust-1.5.1-py3-none-any.whl
@@ -121,13 +119,13 @@ modules:
       - install -Dm644 org.skytemple.SkyTemple.appdata.xml /app/share/metainfo/org.skytemple.SkyTemple.appdata.xml
     sources:
       - type: archive
-        url: https://github.com/SkyTemple/skytemple/archive/refs/tags/1.3.11.post1.tar.gz
-        sha256: cef04b4330da4b6e89f595af3ba8b5d8962717a9dc01fc7e4d0dd73917827e32
+        url: https://github.com/SkyTemple/skytemple/archive/refs/tags/1.4.0a1.tar.gz
+        sha256: 57a605463a2401799aa394682f4309de9e538558510de61ce25bc2d534c8d71c
       - type: file
         path: run.sh
       - type: file
-        url: https://raw.githubusercontent.com/SkyTemple/skytemple/011ab4dd8693cd9537c6866049619412e31322a0/org.skytemple.SkyTemple.desktop
+        url: https://raw.githubusercontent.com/SkyTemple/skytemple/5263ab591e9d9ccea0e96355d532f4672ddd67dc/org.skytemple.SkyTemple.desktop
         sha256: 00e36c71ba7b24a7bb5a64cdcd45b94f304347fc2622e57a0b4bce893154e9f0
       - type: file
-        url: https://raw.githubusercontent.com/SkyTemple/skytemple/011ab4dd8693cd9537c6866049619412e31322a0/org.skytemple.SkyTemple.appdata.xml
-        sha256: 069677ae6756de50a68250b6dddee338669cfcb2f1a7f034546fabc402898f38
+        url: https://raw.githubusercontent.com/SkyTemple/skytemple/5263ab591e9d9ccea0e96355d532f4672ddd67dc/org.skytemple.SkyTemple.appdata.xml
+        sha256: e3e62e36350f9ada7ddaed4f381b61bdde28a83df585379c5facd257d6bd51ed
