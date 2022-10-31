@@ -119,13 +119,13 @@ modules:
       - install -Dm644 org.skytemple.SkyTemple.appdata.xml /app/share/metainfo/org.skytemple.SkyTemple.appdata.xml
     sources:
       - type: archive
-        url: https://github.com/SkyTemple/skytemple/archive/refs/tags/1.4.0a1.tar.gz
-        sha256: 57a605463a2401799aa394682f4309de9e538558510de61ce25bc2d534c8d71c
+        url: https://github.com/SkyTemple/skytemple/archive/refs/tags/1.4.0rc1.tar.gz
+        sha256: a4706d76580facfdeb43f127689dda0dd2f2db2d89075ad0a55029478c0fc3ae
       - type: file
         path: run.sh
       - type: file
-        url: https://raw.githubusercontent.com/SkyTemple/skytemple/5263ab591e9d9ccea0e96355d532f4672ddd67dc/org.skytemple.SkyTemple.desktop
+        url: https://raw.githubusercontent.com/SkyTemple/skytemple/1.4.0rc1/org.skytemple.SkyTemple.desktop
         sha256: 00e36c71ba7b24a7bb5a64cdcd45b94f304347fc2622e57a0b4bce893154e9f0
       - type: file
-        url: https://raw.githubusercontent.com/SkyTemple/skytemple/5263ab591e9d9ccea0e96355d532f4672ddd67dc/org.skytemple.SkyTemple.appdata.xml
-        sha256: e3e62e36350f9ada7ddaed4f381b61bdde28a83df585379c5facd257d6bd51ed
+        url: https://raw.githubusercontent.com/SkyTemple/skytemple/1.4.0rc1/org.skytemple.SkyTemple.appdata.xml
+        sha256: 7ffbcbf8a4c2b77491ebcf9af09ae0809eb11b3ade241f7dac6d0dae77c9696e
