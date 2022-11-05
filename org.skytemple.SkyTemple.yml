@@ -119,13 +119,10 @@ modules:
       - install -Dm644 org.skytemple.SkyTemple.appdata.xml /app/share/metainfo/org.skytemple.SkyTemple.appdata.xml
     sources:
       - type: archive
-        url: https://github.com/SkyTemple/skytemple/archive/refs/tags/1.4.0rc1.tar.gz
-        sha256: a4706d76580facfdeb43f127689dda0dd2f2db2d89075ad0a55029478c0fc3ae
+        # This is 1.4.0. It's just one commit ahead where I removed the pre-release versions from the appdata, 
+        # since Python and the appdata spec seem to disagree on what order versions need to be in.
+        url: https://github.com/SkyTemple/skytemple/archive/6ff7193334b5d4461707f5f6691eeef3268d5e4c.tar.gz
+        #url: https://github.com/SkyTemple/skytemple/archive/refs/tags/1.4.0.tar.gz
+        sha256: 354a824a65ccf5fc4ec818f94aeae6368b5d37e55790af3a25ec5c606c662294
       - type: file
         path: run.sh
-      - type: file
-        url: https://raw.githubusercontent.com/SkyTemple/skytemple/1.4.0rc1/org.skytemple.SkyTemple.desktop
-        sha256: 00e36c71ba7b24a7bb5a64cdcd45b94f304347fc2622e57a0b4bce893154e9f0
-      - type: file
-        url: https://raw.githubusercontent.com/SkyTemple/skytemple/1.4.0rc1/org.skytemple.SkyTemple.appdata.xml
-        sha256: 7ffbcbf8a4c2b77491ebcf9af09ae0809eb11b3ade241f7dac6d0dae77c9696e

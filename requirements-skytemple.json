@@ -26,7 +26,7 @@
             "name": "python3-skytemple-files",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"skytemple-files[spritecollab]==1.4.0\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"skytemple-files[spritecollab]==1.4.1\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -66,13 +66,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/a3/74/dcd4c842370491f7db2c3152c6cc7febf296b01e8b2aedc45506f8486c04/igraph-0.10.1.tar.gz",
-                    "sha256": "65165883cc506ec7c6d8b68e620954810935ef033138aa3a92cba6089339cae6"
+                    "url": "https://files.pythonhosted.org/packages/99/da/1ddf05b7d50c2fb11e0726a35767249dba7d545a15e0426d21d127ba04a2/igraph-0.10.2.tar.gz",
+                    "sha256": "215c53591b0bccd2082ef0e007e1919f25c040abb03014bdb4f20712173e33c2"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/89/3c/dea040eae89d3c7abf06c2e2a0456755751d56433218690d9b4c8f32b3ff/python-igraph-0.10.1.tar.gz",
-                    "sha256": "5ea9168a9ee6811747f6a2ea4f6cc0b93f34d352701258a5efa075512e72a380"
+                    "url": "https://files.pythonhosted.org/packages/d0/93/c5b48fe8fa3d95c61d80754ac6138ad385bbbb6e3b90a1f6a86706efba9f/python-igraph-0.10.2.tar.gz",
+                    "sha256": "8262eecffd39e2d246ac07898dfd13d5e666ae13099bda27eb650cc5dbdf187d"
                 },
                 {
                     "type": "file",
@@ -101,8 +101,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/3b/59/fbcbf9bdce46bc7a3ce6af140dadff9f9c8bd1a641e49ee0f1bfd21f830b/backoff-2.1.2-py3-none-any.whl",
-                    "sha256": "b135e6d7c7513ba2bfd6895bc32bc8c66c6f3b0279b4c6cd866053cfd7d3126b"
+                    "url": "https://files.pythonhosted.org/packages/df/73/b6e24bd22e6720ca8ee9a85a0c4a2971af8497d8f3193fa05390cbd46e09/backoff-2.2.1-py3-none-any.whl",
+                    "sha256": "63579f9a0628e06278f7e47b7d7d5b6ce20dc65c5e96a6f3ca99a6adca0396e8"
                 },
                 {
                     "type": "file",
@@ -121,18 +121,18 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/35/bf/a590b5df78cc0c6cd17dd3d8284b167a29d1d9984ddf8a1770117d461b8c/skytemple_files-1.4.0-py3-none-any.whl",
-                    "sha256": "fc68057763ca49c54316545c75023be9f30438ef18471756cd619c95b7144704"
+                    "url": "https://files.pythonhosted.org/packages/cc/42/7fe16e6642e37ffbc1ee2ca40c115b36fa15dc9c34dabc16054375513282/skytemple_files-1.4.1-py3-none-any.whl",
+                    "sha256": "eaefc5939f8db04113502c39575443022f103a4bc4e0da1cf8bc85472032c9d1"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/81/7f/c581f99a4c4d1eeb50c9e5374e0376cb8cee6b0616ba7de79b43165d2582/tilequant-0.4.1.tar.gz",
-                    "sha256": "eebc8a5b3ebe23238ae799efd11a17824f66425dc677acb54c8e73cd655b95b1"
+                    "url": "https://files.pythonhosted.org/packages/a2/cb/0e087b4574d8de618cf16ad90a542f56cf6e18b3a95d06c86db3b8693da0/tilequant-0.4.1.post0.tar.gz",
+                    "sha256": "0ded5556e38de994a3072cc762c5df11a40b0432f43913fbcd45deeee47e3446"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/f4/20/003fe57862ad39ccfa4ebbede5b227a8e434c91e81eb7dd008b20f9ba71c/skytemple-rust-1.4.0.tar.gz",
-                    "sha256": "c61c9860afa4ed463b5c8719b7399d48e5a6f475752cb1baea8705b6fbadbf86"
+                    "url": "https://files.pythonhosted.org/packages/9c/61/b97cb9dc461fda8edf65c41dfdf05c21401a8624dc3174f29bc82163a146/skytemple-rust-1.4.0.post0.tar.gz",
+                    "sha256": "28b715b35e89fd367c789dd5066a8a1e06e0423ec38d62012a4ca839068500b0"
                 },
                 {
                     "type": "file",
@@ -146,8 +146,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/8c/92/2975b464d9926dc667020ed1abfa6276e68c3571dcb77e43347e15ee9eed/Pillow-9.2.0.tar.gz",
-                    "sha256": "75e636fd3e0fb872693f23ccb8a5ff2cd578801251f3a4f6854c6a5d437d3c04"
+                    "url": "https://files.pythonhosted.org/packages/16/11/da8d395299ca166aa56d9436e26fe8440e5443471de16ccd9a1d06f5993a/Pillow-9.3.0.tar.gz",
+                    "sha256": "c935a22a557a560108d780f9a0fc426dd7459940dc54faa49d83249c8d3e760f"
                 },
                 {
                     "type": "file",
@@ -186,8 +186,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/09/44/48f1311f3ed354f34e7ab1134847a784fa6221285ac2fb41158b7ce03d14/pmdsky_debug_py-3.0.3-py3-none-any.whl",
-                    "sha256": "5fb965020f4898b30c08533508e2f5b1d230676ac0cf406e3b799199aed4c5c0"
+                    "url": "https://files.pythonhosted.org/packages/06/d7/93705c7b760f44a6858c681ca2a92e460069c159e10df3508cf6b1b9d4eb/pmdsky_debug_py-3.0.4-py3-none-any.whl",
+                    "sha256": "064179ac3583e8150a5ac14ef02687002c02986f3c1e0bc3c3ddbd55077dd599"
                 },
                 {
                     "type": "file",
@@ -205,8 +205,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/09/44/48f1311f3ed354f34e7ab1134847a784fa6221285ac2fb41158b7ce03d14/pmdsky_debug_py-3.0.3-py3-none-any.whl",
-                    "sha256": "5fb965020f4898b30c08533508e2f5b1d230676ac0cf406e3b799199aed4c5c0"
+                    "url": "https://files.pythonhosted.org/packages/06/d7/93705c7b760f44a6858c681ca2a92e460069c159e10df3508cf6b1b9d4eb/pmdsky_debug_py-3.0.4-py3-none-any.whl",
+                    "sha256": "064179ac3583e8150a5ac14ef02687002c02986f3c1e0bc3c3ddbd55077dd599"
                 }
             ]
         },
@@ -239,13 +239,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/a3/74/dcd4c842370491f7db2c3152c6cc7febf296b01e8b2aedc45506f8486c04/igraph-0.10.1.tar.gz",
-                    "sha256": "65165883cc506ec7c6d8b68e620954810935ef033138aa3a92cba6089339cae6"
+                    "url": "https://files.pythonhosted.org/packages/99/da/1ddf05b7d50c2fb11e0726a35767249dba7d545a15e0426d21d127ba04a2/igraph-0.10.2.tar.gz",
+                    "sha256": "215c53591b0bccd2082ef0e007e1919f25c040abb03014bdb4f20712173e33c2"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/89/3c/dea040eae89d3c7abf06c2e2a0456755751d56433218690d9b4c8f32b3ff/python-igraph-0.10.1.tar.gz",
-                    "sha256": "5ea9168a9ee6811747f6a2ea4f6cc0b93f34d352701258a5efa075512e72a380"
+                    "url": "https://files.pythonhosted.org/packages/d0/93/c5b48fe8fa3d95c61d80754ac6138ad385bbbb6e3b90a1f6a86706efba9f/python-igraph-0.10.2.tar.gz",
+                    "sha256": "8262eecffd39e2d246ac07898dfd13d5e666ae13099bda27eb650cc5dbdf187d"
                 },
                 {
                     "type": "file",
@@ -259,13 +259,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/81/7f/c581f99a4c4d1eeb50c9e5374e0376cb8cee6b0616ba7de79b43165d2582/tilequant-0.4.1.tar.gz",
-                    "sha256": "eebc8a5b3ebe23238ae799efd11a17824f66425dc677acb54c8e73cd655b95b1"
+                    "url": "https://files.pythonhosted.org/packages/a2/cb/0e087b4574d8de618cf16ad90a542f56cf6e18b3a95d06c86db3b8693da0/tilequant-0.4.1.post0.tar.gz",
+                    "sha256": "0ded5556e38de994a3072cc762c5df11a40b0432f43913fbcd45deeee47e3446"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/f4/20/003fe57862ad39ccfa4ebbede5b227a8e434c91e81eb7dd008b20f9ba71c/skytemple-rust-1.4.0.tar.gz",
-                    "sha256": "c61c9860afa4ed463b5c8719b7399d48e5a6f475752cb1baea8705b6fbadbf86"
+                    "url": "https://files.pythonhosted.org/packages/9c/61/b97cb9dc461fda8edf65c41dfdf05c21401a8624dc3174f29bc82163a146/skytemple-rust-1.4.0.post0.tar.gz",
+                    "sha256": "28b715b35e89fd367c789dd5066a8a1e06e0423ec38d62012a4ca839068500b0"
                 },
                 {
                     "type": "file",
@@ -299,8 +299,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/09/44/48f1311f3ed354f34e7ab1134847a784fa6221285ac2fb41158b7ce03d14/pmdsky_debug_py-3.0.3-py3-none-any.whl",
-                    "sha256": "5fb965020f4898b30c08533508e2f5b1d230676ac0cf406e3b799199aed4c5c0"
+                    "url": "https://files.pythonhosted.org/packages/06/d7/93705c7b760f44a6858c681ca2a92e460069c159e10df3508cf6b1b9d4eb/pmdsky_debug_py-3.0.4-py3-none-any.whl",
+                    "sha256": "064179ac3583e8150a5ac14ef02687002c02986f3c1e0bc3c3ddbd55077dd599"
                 },
                 {
                     "type": "file",
@@ -309,13 +309,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/35/bf/a590b5df78cc0c6cd17dd3d8284b167a29d1d9984ddf8a1770117d461b8c/skytemple_files-1.4.0-py3-none-any.whl",
-                    "sha256": "fc68057763ca49c54316545c75023be9f30438ef18471756cd619c95b7144704"
+                    "url": "https://files.pythonhosted.org/packages/cc/42/7fe16e6642e37ffbc1ee2ca40c115b36fa15dc9c34dabc16054375513282/skytemple_files-1.4.1-py3-none-any.whl",
+                    "sha256": "eaefc5939f8db04113502c39575443022f103a4bc4e0da1cf8bc85472032c9d1"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/8c/92/2975b464d9926dc667020ed1abfa6276e68c3571dcb77e43347e15ee9eed/Pillow-9.2.0.tar.gz",
-                    "sha256": "75e636fd3e0fb872693f23ccb8a5ff2cd578801251f3a4f6854c6a5d437d3c04"
+                    "url": "https://files.pythonhosted.org/packages/16/11/da8d395299ca166aa56d9436e26fe8440e5443471de16ccd9a1d06f5993a/Pillow-9.3.0.tar.gz",
+                    "sha256": "c935a22a557a560108d780f9a0fc426dd7459940dc54faa49d83249c8d3e760f"
                 },
                 {
                     "type": "file",
@@ -370,7 +370,7 @@
             "name": "python3-tilequant",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"tilequant==0.4.1\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"tilequant==0.4.1.post0\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -385,8 +385,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/8c/92/2975b464d9926dc667020ed1abfa6276e68c3571dcb77e43347e15ee9eed/Pillow-9.2.0.tar.gz",
-                    "sha256": "75e636fd3e0fb872693f23ccb8a5ff2cd578801251f3a4f6854c6a5d437d3c04"
+                    "url": "https://files.pythonhosted.org/packages/16/11/da8d395299ca166aa56d9436e26fe8440e5443471de16ccd9a1d06f5993a/Pillow-9.3.0.tar.gz",
+                    "sha256": "c935a22a557a560108d780f9a0fc426dd7459940dc54faa49d83249c8d3e760f"
                 },
                 {
                     "type": "file",
@@ -400,8 +400,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/81/7f/c581f99a4c4d1eeb50c9e5374e0376cb8cee6b0616ba7de79b43165d2582/tilequant-0.4.1.tar.gz",
-                    "sha256": "eebc8a5b3ebe23238ae799efd11a17824f66425dc677acb54c8e73cd655b95b1"
+                    "url": "https://files.pythonhosted.org/packages/a2/cb/0e087b4574d8de618cf16ad90a542f56cf6e18b3a95d06c86db3b8693da0/tilequant-0.4.1.post0.tar.gz",
+                    "sha256": "0ded5556e38de994a3072cc762c5df11a40b0432f43913fbcd45deeee47e3446"
                 }
             ]
         },
@@ -409,7 +409,7 @@
             "name": "python3-skytemple-ssb-debugger",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"skytemple-ssb-debugger==1.4.0a4\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"skytemple-ssb-debugger==1.4.0\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -444,13 +444,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/81/7f/c581f99a4c4d1eeb50c9e5374e0376cb8cee6b0616ba7de79b43165d2582/tilequant-0.4.1.tar.gz",
-                    "sha256": "eebc8a5b3ebe23238ae799efd11a17824f66425dc677acb54c8e73cd655b95b1"
+                    "url": "https://files.pythonhosted.org/packages/a2/cb/0e087b4574d8de618cf16ad90a542f56cf6e18b3a95d06c86db3b8693da0/tilequant-0.4.1.post0.tar.gz",
+                    "sha256": "0ded5556e38de994a3072cc762c5df11a40b0432f43913fbcd45deeee47e3446"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/f4/20/003fe57862ad39ccfa4ebbede5b227a8e434c91e81eb7dd008b20f9ba71c/skytemple-rust-1.4.0.tar.gz",
-                    "sha256": "c61c9860afa4ed463b5c8719b7399d48e5a6f475752cb1baea8705b6fbadbf86"
+                    "url": "https://files.pythonhosted.org/packages/9c/61/b97cb9dc461fda8edf65c41dfdf05c21401a8624dc3174f29bc82163a146/skytemple-rust-1.4.0.post0.tar.gz",
+                    "sha256": "28b715b35e89fd367c789dd5066a8a1e06e0423ec38d62012a4ca839068500b0"
                 },
                 {
                     "type": "file",
@@ -459,13 +459,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/a3/74/dcd4c842370491f7db2c3152c6cc7febf296b01e8b2aedc45506f8486c04/igraph-0.10.1.tar.gz",
-                    "sha256": "65165883cc506ec7c6d8b68e620954810935ef033138aa3a92cba6089339cae6"
+                    "url": "https://files.pythonhosted.org/packages/99/da/1ddf05b7d50c2fb11e0726a35767249dba7d545a15e0426d21d127ba04a2/igraph-0.10.2.tar.gz",
+                    "sha256": "215c53591b0bccd2082ef0e007e1919f25c040abb03014bdb4f20712173e33c2"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/89/3c/dea040eae89d3c7abf06c2e2a0456755751d56433218690d9b4c8f32b3ff/python-igraph-0.10.1.tar.gz",
-                    "sha256": "5ea9168a9ee6811747f6a2ea4f6cc0b93f34d352701258a5efa075512e72a380"
+                    "url": "https://files.pythonhosted.org/packages/d0/93/c5b48fe8fa3d95c61d80754ac6138ad385bbbb6e3b90a1f6a86706efba9f/python-igraph-0.10.2.tar.gz",
+                    "sha256": "8262eecffd39e2d246ac07898dfd13d5e666ae13099bda27eb650cc5dbdf187d"
                 },
                 {
                     "type": "file",
@@ -474,8 +474,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/8c/92/2975b464d9926dc667020ed1abfa6276e68c3571dcb77e43347e15ee9eed/Pillow-9.2.0.tar.gz",
-                    "sha256": "75e636fd3e0fb872693f23ccb8a5ff2cd578801251f3a4f6854c6a5d437d3c04"
+                    "url": "https://files.pythonhosted.org/packages/16/11/da8d395299ca166aa56d9436e26fe8440e5443471de16ccd9a1d06f5993a/Pillow-9.3.0.tar.gz",
+                    "sha256": "c935a22a557a560108d780f9a0fc426dd7459940dc54faa49d83249c8d3e760f"
                 },
                 {
                     "type": "file",
@@ -494,13 +494,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/09/44/48f1311f3ed354f34e7ab1134847a784fa6221285ac2fb41158b7ce03d14/pmdsky_debug_py-3.0.3-py3-none-any.whl",
-                    "sha256": "5fb965020f4898b30c08533508e2f5b1d230676ac0cf406e3b799199aed4c5c0"
+                    "url": "https://files.pythonhosted.org/packages/06/d7/93705c7b760f44a6858c681ca2a92e460069c159e10df3508cf6b1b9d4eb/pmdsky_debug_py-3.0.4-py3-none-any.whl",
+                    "sha256": "064179ac3583e8150a5ac14ef02687002c02986f3c1e0bc3c3ddbd55077dd599"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/35/bf/a590b5df78cc0c6cd17dd3d8284b167a29d1d9984ddf8a1770117d461b8c/skytemple_files-1.4.0-py3-none-any.whl",
-                    "sha256": "fc68057763ca49c54316545c75023be9f30438ef18471756cd619c95b7144704"
+                    "url": "https://files.pythonhosted.org/packages/cc/42/7fe16e6642e37ffbc1ee2ca40c115b36fa15dc9c34dabc16054375513282/skytemple_files-1.4.1-py3-none-any.whl",
+                    "sha256": "eaefc5939f8db04113502c39575443022f103a4bc4e0da1cf8bc85472032c9d1"
                 },
                 {
                     "type": "file",
@@ -519,8 +519,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/2d/21/7207c30bcdb1b8a4fc0aee3e16d623866db1f2c382d3763d015fbaefebbc/py-desmume-0.0.5.tar.gz",
-                    "sha256": "643bd5a080bfab4863f2082aa000939c625672ed940cf2f657b0007f7ee819be"
+                    "url": "https://files.pythonhosted.org/packages/5f/ff/49e8ead48a91905d4b80a3c19cc1ef7e85167ed0d5b1ef263d2833e91bbc/py-desmume-0.0.5.post0.tar.gz",
+                    "sha256": "470767a54b52cc4f99bdb2a556b81a39488dc7a032b0872896469033bb3d8166"
                 },
                 {
                     "type": "file",
@@ -544,8 +544,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/b7/cd/40df643dcb960bc7037efc9247662846cdf215c95be14d9e0e02ef02662b/skytemple_ssb_debugger-1.4.0a4-py3-none-any.whl",
-                    "sha256": "048ae5b0076cf91112cf9a0752613e16de18c63090024e260fa02bace25fe1e8"
+                    "url": "https://files.pythonhosted.org/packages/f3/02/73aa216fb18544283665b200b222c8a6fd2a723e8fd18f808e357a48c910/skytemple_ssb_debugger-1.4.0-py3-none-any.whl",
+                    "sha256": "9482f34d20487156ebcdda888a61a65725ddc81bea5cfdf69d932a69919fc0bf"
                 }
             ]
         },
@@ -615,13 +615,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/53/7b/5dba39bf0572f1f28e2844f08f74a73482a381de1d1feac3bbc6b808051e/tinycss2-1.1.1-py3-none-any.whl",
-                    "sha256": "fe794ceaadfe3cf3e686b22155d0da5780dd0e273471a51846d0a02bc204fec8"
+                    "url": "https://files.pythonhosted.org/packages/da/99/fd23634d6962c2791fb8cb6ccae1f05dcbfc39bce36bba8b1c9a8d92eae8/tinycss2-1.2.1-py3-none-any.whl",
+                    "sha256": "2b80a96d41e7c3914b8cda8bc7f705a4d9c49275616e886103dd839dfc847847"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/8c/92/2975b464d9926dc667020ed1abfa6276e68c3571dcb77e43347e15ee9eed/Pillow-9.2.0.tar.gz",
-                    "sha256": "75e636fd3e0fb872693f23ccb8a5ff2cd578801251f3a4f6854c6a5d437d3c04"
+                    "url": "https://files.pythonhosted.org/packages/16/11/da8d395299ca166aa56d9436e26fe8440e5443471de16ccd9a1d06f5993a/Pillow-9.3.0.tar.gz",
+                    "sha256": "c935a22a557a560108d780f9a0fc426dd7459940dc54faa49d83249c8d3e760f"
                 },
                 {
                     "type": "file",
@@ -668,13 +668,13 @@
             "name": "python3-psutil",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"psutil==5.9.2\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"psutil==5.9.3\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/8f/57/828ac1f70badc691a716e77bfae258ef5db76bb7830109bf4bcf882de020/psutil-5.9.2.tar.gz",
-                    "sha256": "feb861a10b6c3bb00701063b37e4afc754f8217f0f09c42280586bd6ac712b5c"
+                    "url": "https://files.pythonhosted.org/packages/de/eb/1c01a34c86ee3b058c556e407ce5b07cb7d186ebe47b3e69d6f152ca5cc5/psutil-5.9.3.tar.gz",
+                    "sha256": "7ccfcdfea4fc4b0a02ca2c31de7fcd186beb9cff8207800e14ab66f79c773af6"
                 }
             ]
         },
@@ -682,7 +682,7 @@
             "name": "python3-sentry-sdk",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"sentry-sdk==1.9.9\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"sentry-sdk==1.9.10\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -697,8 +697,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/97/ad/5f8fd1bdeee1219f9de19b73fbd04a0215f846b46aa11b2385a3a008b332/sentry_sdk-1.9.9-py2.py3-none-any.whl",
-                    "sha256": "ef925b5338625448645a778428d8f22a3d17de8b28cc8e6fba60b93393ad86fe"
+                    "url": "https://files.pythonhosted.org/packages/06/c6/331d30886b234073ea199f887e3231bb17effc6af495bcee73f164964035/sentry_sdk-1.9.10-py2.py3-none-any.whl",
+                    "sha256": "2469240f6190aaebcb453033519eae69cfe8cc602065b4667e18ee14fc1e35dc"
                 }
             ]
         },
