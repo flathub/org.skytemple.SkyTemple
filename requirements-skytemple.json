@@ -26,7 +26,7 @@
             "name": "python3-skytemple-files",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"skytemple-files[spritecollab]==1.4.4\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"skytemple-files[spritecollab]==1.4.7\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -76,8 +76,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/81/75/d2163a383dd2d6e72d396cac6f021aafd5ec2081c66ef7f816de1d4d4f0c/igraph-0.10.3.tar.gz",
-                    "sha256": "b720cb88c4b9af4a968e8390355f666ba146d631298518cc4ffa1bd0e2c21eed"
+                    "url": "https://files.pythonhosted.org/packages/8d/3d/86afa1a688b9b1e614ad19054c71004b165a6610e291d695f06621b44b8a/igraph-0.10.4.tar.gz",
+                    "sha256": "4786e05919ee93f6479fe8ca697d68537edfe47549ed09dfb33bda4daced1fb9"
                 },
                 {
                     "type": "file",
@@ -91,8 +91,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/db/51/a507c856293ab05cdc1db77ff4bc1268ddd39f29e7dc4919aa497f0adbec/charset_normalizer-2.1.1-py3-none-any.whl",
-                    "sha256": "83e9a75d1911279afd89352c68b45348559d1fc0506b054b346651b5e7fee29f"
+                    "url": "https://files.pythonhosted.org/packages/ff/d7/8d757f8bd45be079d76309248845a04f09619a7b17d6dfc8c9ff6433cac2/charset-normalizer-3.1.0.tar.gz",
+                    "sha256": "34e0a2f9c370eb95597aae63bf85eb5e96826d81e3dcf88b8886012906f509b5"
                 },
                 {
                     "type": "file",
@@ -116,8 +116,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5b/79/d5a0f0bf13064b6a8c42137bfb5ff5d7f686b65af0b60a39a7aec15c9278/skytemple_files-1.4.4-py3-none-any.whl",
-                    "sha256": "3d2a88b587163b1e2131b8fa7874f3cf02020ec526f62c43edf208b9099f25e9"
+                    "url": "https://files.pythonhosted.org/packages/b8/2b/9838a4313518eb1e99a90dbbe632013c7acfa008a9805a4764664651aa56/skytemple_files-1.4.7-py3-none-any.whl",
+                    "sha256": "a7f36c2100ba4e9461e109a224de01ebfa510cf0c0d578977103c3cfe780afb5"
                 },
                 {
                     "type": "file",
@@ -176,8 +176,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ff/4f/62d9859b7d4e6dc32feda67815c5f5ab4421e6909e48cbc970b6a40d60b7/aiohttp-3.8.3.tar.gz",
-                    "sha256": "3828fb41b7203176b82fe5d699e0d845435f2374750a44b480ea6b930f6be269"
+                    "url": "https://files.pythonhosted.org/packages/c2/fd/1ff4da09ca29d8933fda3f3514980357e25419ce5e0f689041edb8f17dab/aiohttp-3.8.4.tar.gz",
+                    "sha256": "bf2e1a9162c1e441bf805a1fd166e249d574ca04e03b34f97e2928769e91ab5c"
                 },
                 {
                     "type": "file",
@@ -239,8 +239,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/81/75/d2163a383dd2d6e72d396cac6f021aafd5ec2081c66ef7f816de1d4d4f0c/igraph-0.10.3.tar.gz",
-                    "sha256": "b720cb88c4b9af4a968e8390355f666ba146d631298518cc4ffa1bd0e2c21eed"
+                    "url": "https://files.pythonhosted.org/packages/8d/3d/86afa1a688b9b1e614ad19054c71004b165a6610e291d695f06621b44b8a/igraph-0.10.4.tar.gz",
+                    "sha256": "4786e05919ee93f6479fe8ca697d68537edfe47549ed09dfb33bda4daced1fb9"
                 },
                 {
                     "type": "file",
@@ -299,8 +299,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5b/79/d5a0f0bf13064b6a8c42137bfb5ff5d7f686b65af0b60a39a7aec15c9278/skytemple_files-1.4.4-py3-none-any.whl",
-                    "sha256": "3d2a88b587163b1e2131b8fa7874f3cf02020ec526f62c43edf208b9099f25e9"
+                    "url": "https://files.pythonhosted.org/packages/b8/2b/9838a4313518eb1e99a90dbbe632013c7acfa008a9805a4764664651aa56/skytemple_files-1.4.7-py3-none-any.whl",
+                    "sha256": "a7f36c2100ba4e9461e109a224de01ebfa510cf0c0d578977103c3cfe780afb5"
                 },
                 {
                     "type": "file",
@@ -346,13 +346,13 @@
             "name": "python3-natsort",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"natsort==8.2.0\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"natsort==8.3.1\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/3e/58/61c4b4fd9e597affdcd3347d5991fa5be404af26f19932d3116b67e133da/natsort-8.2.0-py3-none-any.whl",
-                    "sha256": "04fe18fdd2b9e5957f19f687eb117f102ef8dde6b574764e536e91194bed4f5f"
+                    "url": "https://files.pythonhosted.org/packages/5f/e1/70d203ba3ae5476f25fb8a2015d6a7ff156a4ce4795e36955c144ea5a826/natsort-8.3.1-py3-none-any.whl",
+                    "sha256": "d583bc9050dd10538de36297c960b93f873f0cd01671a3c50df5bd86dd391dcb"
                 }
             ]
         },
@@ -459,8 +459,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/81/75/d2163a383dd2d6e72d396cac6f021aafd5ec2081c66ef7f816de1d4d4f0c/igraph-0.10.3.tar.gz",
-                    "sha256": "b720cb88c4b9af4a968e8390355f666ba146d631298518cc4ffa1bd0e2c21eed"
+                    "url": "https://files.pythonhosted.org/packages/8d/3d/86afa1a688b9b1e614ad19054c71004b165a6610e291d695f06621b44b8a/igraph-0.10.4.tar.gz",
+                    "sha256": "4786e05919ee93f6479fe8ca697d68537edfe47549ed09dfb33bda4daced1fb9"
                 },
                 {
                     "type": "file",
@@ -484,8 +484,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5b/79/d5a0f0bf13064b6a8c42137bfb5ff5d7f686b65af0b60a39a7aec15c9278/skytemple_files-1.4.4-py3-none-any.whl",
-                    "sha256": "3d2a88b587163b1e2131b8fa7874f3cf02020ec526f62c43edf208b9099f25e9"
+                    "url": "https://files.pythonhosted.org/packages/b8/2b/9838a4313518eb1e99a90dbbe632013c7acfa008a9805a4764664651aa56/skytemple_files-1.4.7-py3-none-any.whl",
+                    "sha256": "a7f36c2100ba4e9461e109a224de01ebfa510cf0c0d578977103c3cfe780afb5"
                 },
                 {
                     "type": "file",
@@ -580,7 +580,7 @@
             "name": "python3-CairoSVG",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"CairoSVG==2.5.2\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"CairoSVG==2.6.0\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -625,8 +625,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/01/42/0e6584a0c564201ac3004dd41240bbbdb12c8343f414a559f9161b0859fb/CairoSVG-2.5.2-py3-none-any.whl",
-                    "sha256": "98c276b7e4f0caf01e5c7176765c104ffa1aa1461d63b2053b04ab663cf7052b"
+                    "url": "https://files.pythonhosted.org/packages/eb/52/6a8c63dc86d5147ceda17f3951d8fc2cd25413ff24287cbbb17d912450ce/CairoSVG-2.6.0-py3-none-any.whl",
+                    "sha256": "05069d5316e9f02f33028942f96929e01782db41e6ff07d8454c8d021b5b52f3"
                 }
             ]
         },
@@ -667,7 +667,7 @@
             "name": "python3-sentry-sdk",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"sentry-sdk==1.12.1\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"sentry-sdk==1.15.0\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -677,13 +677,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/65/0c/cc6644eaa594585e5875f46f3c83ee8762b647b51fc5b0fb253a242df2dc/urllib3-1.26.13-py2.py3-none-any.whl",
-                    "sha256": "47cc05d99aaa09c9e72ed5809b60e7ba354e64b59c9c173ac3018642d8bb41fc"
+                    "url": "https://files.pythonhosted.org/packages/fe/ca/466766e20b767ddb9b951202542310cba37ea5f2d792dae7589f1741af58/urllib3-1.26.14-py2.py3-none-any.whl",
+                    "sha256": "75edcdc2f7d85b137124a6c3c9fc3933cdeaa12ecb9a6a959f22797a0feca7e1"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/5f/aa/526c8ed2f1e499d641d4cd05a91cd56be9c078597c4b39033a43e794f827/sentry_sdk-1.12.1-py2.py3-none-any.whl",
-                    "sha256": "9f0b960694e2d8bb04db4ba6ac2a645040caef4e762c65937998ff06064f10d6"
+                    "url": "https://files.pythonhosted.org/packages/bf/aa/63c8e43ec1bcb872844aa62edb8811aa35249319a729293d331296ef3206/sentry_sdk-1.15.0-py2.py3-none-any.whl",
+                    "sha256": "7ad4d37dd093f4a7cb5ad804c6efe9e8fab8873f7ffc06042dc3f3fd700a93ec"
                 }
             ]
         },
@@ -696,8 +696,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/8f/7b/42582927d281d7cb035609cd3a543ffac89b74f3f4ee8e1c50914bcb57eb/packaging-22.0-py3-none-any.whl",
-                    "sha256": "957e2148ba0e1a3b282772e791ef1d8083648bc131c8ab0c1feba110ce1146c3"
+                    "url": "https://files.pythonhosted.org/packages/ed/35/a31aed2993e398f6b09a790a181a7927eb14610ee8bbf02dc14d31677f1c/packaging-23.0-py3-none-any.whl",
+                    "sha256": "714ac14496c3e68c99c29b00845f7a2b85f3bb6f1078fd9f72fd20f0570002b2"
                 }
             ]
         }
