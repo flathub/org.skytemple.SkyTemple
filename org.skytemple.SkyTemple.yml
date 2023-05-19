@@ -97,7 +97,7 @@ modules:
       - install -Dm644 org.skytemple.SkyTemple.appdata.xml /app/share/metainfo/org.skytemple.SkyTemple.appdata.xml
     sources:
       - type: archive
-        url: https://github.com/SkyTemple/skytemple/archive/refs/tags/1.5.0.tar.gz
-        sha256: a8ab0524495b2195fb4e86df514beb2ea514db75d5dea4bf2e2f3edefe6cd4b6
+        url: https://github.com/SkyTemple/skytemple/archive/refs/tags/1.5.1.tar.gz
+        sha256: db15148eb533726b4cb843987e56571af34ed00d246d783c9f3ed1920bd9a0d5
       - type: file
         path: run.sh
