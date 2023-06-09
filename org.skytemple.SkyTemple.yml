@@ -1,6 +1,6 @@
 app-id: org.skytemple.SkyTemple
 runtime: org.gnome.Platform
-runtime-version: '43'
+runtime-version: '44'
 sdk: org.gnome.Sdk
 command: run.sh
 finish-args:
@@ -61,7 +61,7 @@ modules:
         sha256: 2e24e0bec025f035a2e72cdd1961119f557d78ad331bb00ff82efb2ab8da8e82
       - type: git
         url: https://github.com/SkyTemple/skytemple-rust.git
-        tag: 1.4.0
+        tag: "1.5.1"
         dest: skytemple-rust
       - type: file
         url: https://files.pythonhosted.org/packages/5b/76/6ebf4728d287527514b29bc92c14ec59f666f43b0af650df6c100614c3dc/setuptools_rust-1.5.1-py3-none-any.whl
@@ -78,28 +78,6 @@ modules:
     - type: archive
       url: https://www.tcpdump.org/release/libpcap-1.10.1.tar.gz
       sha512: 56c314f19c2b857742bf8abcb1e78066986aaa95cec339b75a3c8b70a9fa2b5167da98708352f9ec97a1cea2700cfb4e040bda108d58ac46cec9b7deab88d171
-  # This is needed by cariocffi - It uses setuptools installer which does not support offline installation unless these packages are already installed before.
-  # upstream issue: https://github.com/Kozea/cairocffi/issues/206
-  - name: python3-pytest-runner
-    buildsystem: simple
-    build-commands:
-      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "pytest-runner"
-    sources:
-      - type: file
-        url: https://files.pythonhosted.org/packages/42/7b/1cec26caae4bf44bb9911e1119d5d1a35171571e100b728a2ccd8719a3b1/pytest_runner-6.0.0-py3-none-any.whl
-        sha256: 4c059cf11cf4306e369c0f8f703d1eaf8f32fad370f41deb5f007044656aca6b
-  # This is needed by cariocffi - see above.
-  - name: python3-cffi
-    buildsystem: simple
-    build-commands:
-      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "cffi>=1.1.0"
-    sources:
-      - type: file
-        url: https://files.pythonhosted.org/packages/2b/a8/050ab4f0c3d4c1b8aaa805f70e26e84d0e27004907c5b8ecc1d31815f92a/cffi-1.15.1.tar.gz
-        sha256: d400bfb9a37b1351253cb402671cea7e89bdecc294e8016a707f6d1d8ac934f9
-      - type: file
-        url: https://files.pythonhosted.org/packages/62/d5/5f610ebe421e85889f2e55e33b7f9a6795bd982198517d912eb1c76e1a53/pycparser-2.21-py2.py3-none-any.whl
-        sha256: 8ee45429555515e1f6b185e78100aea234072576aa43ab53aefcae078162fca9
   - requirements-skytemple.json
   - name: skytemple
     buildsystem: simple
@@ -119,13 +97,7 @@ modules:
       - install -Dm644 org.skytemple.SkyTemple.appdata.xml /app/share/metainfo/org.skytemple.SkyTemple.appdata.xml
     sources:
       - type: archive
-        url: https://github.com/SkyTemple/skytemple/archive/refs/tags/1.4.0rc1.tar.gz
-        sha256: a4706d76580facfdeb43f127689dda0dd2f2db2d89075ad0a55029478c0fc3ae
+        url: https://github.com/SkyTemple/skytemple/archive/refs/tags/1.5.1.tar.gz
+        sha256: db15148eb533726b4cb843987e56571af34ed00d246d783c9f3ed1920bd9a0d5
       - type: file
         path: run.sh
-      - type: file
-        url: https://raw.githubusercontent.com/SkyTemple/skytemple/1.4.0rc1/org.skytemple.SkyTemple.desktop
-        sha256: 00e36c71ba7b24a7bb5a64cdcd45b94f304347fc2622e57a0b4bce893154e9f0
-      - type: file
-        url: https://raw.githubusercontent.com/SkyTemple/skytemple/1.4.0rc1/org.skytemple.SkyTemple.appdata.xml
-        sha256: 7ffbcbf8a4c2b77491ebcf9af09ae0809eb11b3ade241f7dac6d0dae77c9696e
