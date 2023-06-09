@@ -7,6 +7,7 @@ finish-args:
   - "--share=network"
   - "--socket=fallback-x11"
   - "--socket=wayland"
+  - "--socket=pulseaudio"
   - "--share=ipc"
   - "--filesystem=host"
   - "--filesystem=xdg-run/app/com.discordapp.Discord:create"
@@ -61,14 +62,14 @@ modules:
         sha256: 2e24e0bec025f035a2e72cdd1961119f557d78ad331bb00ff82efb2ab8da8e82
       - type: git
         url: https://github.com/SkyTemple/skytemple-rust.git
-        tag: "1.5.1"
+        tag: "1.6.0a1"
         dest: skytemple-rust
       - type: file
         url: https://files.pythonhosted.org/packages/5b/76/6ebf4728d287527514b29bc92c14ec59f666f43b0af650df6c100614c3dc/setuptools_rust-1.5.1-py3-none-any.whl
         sha256: 306b236ff3aa5229180e58292610d0c2c51bb488191122d2fc559ae4caeb7d5e
       - type: patch
         path: patches/skytemple_rust_setup_py.patch
-  # This is required by py-desmume.
+  # This is required by desmume-rs.
   - name: pcap
     buildsystem: autotools
     config-opts:
@@ -78,6 +79,50 @@ modules:
     - type: archive
       url: https://www.tcpdump.org/release/libpcap-1.10.1.tar.gz
       sha512: 56c314f19c2b857742bf8abcb1e78066986aaa95cec339b75a3c8b70a9fa2b5167da98708352f9ec97a1cea2700cfb4e040bda108d58ac46cec9b7deab88d171
+  # This needs to be done seperately due to some patches and the Rust compiler and Cargo packages required.
+  # Also this needs build isolation, unlike the rest.
+  - name: python3-skytemple-ssb-emulator
+    buildsystem: simple
+    build-commands:
+      - . /usr/lib/sdk/rust-stable/enable.sh && pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "./ssb-emulator"
+    build-options:
+      env:
+        CARGO_HOME: /run/build/python3-skytemple-ssb-emulator/cargo
+    sources:
+      - cargo-sources-ssb-emulator.json
+      - type: file
+        url: https://files.pythonhosted.org/packages/27/d6/003e593296a85fd6ed616ed962795b2f87709c3eee2bca4f6d0fe55c6d00/wheel-0.37.1-py2.py3-none-any.whl
+        sha256: 4bdcd7d840138086126cd09254dc6195fb4fc6f01c050a1d7236f2630db1d22a
+      - type: file
+        url: https://files.pythonhosted.org/packages/2e/49/565350c6fab3f5a3e2c46633290117060e70e2501544cdf3bde1d1d5d0fe/range_typed_integers-1.0.1-py3-none-any.whl
+        sha256: 35d39a41642503c5c5117e26798713f081b1beece1b2afd8f1ba70c8d90f63c5
+      - type: file
+        url: https://files.pythonhosted.org/packages/6a/23/8146aad7d88f4fcb3a6218f41a60f6c2d4e3a72de72da1825dc7c8f7877c/semantic_version-2.10.0-py2.py3-none-any.whl
+        sha256: de78a3b8e0feda74cabc54aab2da702113e33ac9d9eb9d2389bcf1f58b7d9177
+      - type: file
+        url: https://files.pythonhosted.org/packages/ed/d6/2afc375a8d55b8be879d6b4986d4f69f01115e795e36827fd3a40166028b/typing_extensions-4.3.0-py3-none-any.whl
+        sha256: 25642c956049920a5aa49edcdd6ab1e06d7e5d467fc00e0506c44ac86fbfca02
+      - type: file
+        url: https://files.pythonhosted.org/packages/d9/5f/2daccd14278b6b780ae6799f85998377c06019354982391245f4b58a927d/setuptools-65.3.0-py3-none-any.whl
+        sha256: 2e24e0bec025f035a2e72cdd1961119f557d78ad331bb00ff82efb2ab8da8e82
+      - type: file
+        url: https://files.pythonhosted.org/packages/ce/55/52776f722af3db59e1f15b15934d736c3dca31b4964a78fe8fdddf06ec57/meson-1.1.1-py3-none-any.whl
+        sha256: 1c5a46660dfbe5f45ef7588d78429d04ebdb6f84b96b4b015033572d2facbbe5
+      - type: git
+        url: https://github.com/SkyTemple/skytemple-ssb-emulator.git
+        tag: "1.6.0a1-1"
+        dest: ssb-emulator
+      - type: file
+        url: https://files.pythonhosted.org/packages/5b/76/6ebf4728d287527514b29bc92c14ec59f666f43b0af650df6c100614c3dc/setuptools_rust-1.5.1-py3-none-any.whl
+        sha256: 306b236ff3aa5229180e58292610d0c2c51bb488191122d2fc559ae4caeb7d5e
+      - type: patch
+        path: patches/ssb_emulator_setup_py.patch
+      - type: patch
+        path: patches/ssb_emulator_cargo.patch
+      - type: git
+        url: https://github.com/SkyTemple/skytemple-rust.git
+        tag: "1.6.0a1"
+        dest: skytemple-rust
   - requirements-skytemple.json
   - name: skytemple
     buildsystem: simple
@@ -96,8 +141,7 @@ modules:
       - install -Dm644 org.skytemple.SkyTemple.desktop /app/share/applications/org.skytemple.SkyTemple.desktop
       - install -Dm644 org.skytemple.SkyTemple.appdata.xml /app/share/metainfo/org.skytemple.SkyTemple.appdata.xml
     sources:
-      - type: archive
-        url: https://github.com/SkyTemple/skytemple/archive/refs/tags/1.5.1.tar.gz
-        sha256: db15148eb533726b4cb843987e56571af34ed00d246d783c9f3ed1920bd9a0d5
+      - type: git
+        url: https://github.com/SkyTemple/skytemple.git
       - type: file
         path: run.sh
