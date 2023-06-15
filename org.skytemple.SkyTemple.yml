@@ -61,7 +61,7 @@ modules:
         sha256: 2e24e0bec025f035a2e72cdd1961119f557d78ad331bb00ff82efb2ab8da8e82
       - type: git
         url: https://github.com/SkyTemple/skytemple-rust.git
-        tag: "1.5.1"
+        tag: "1.5.3"
         dest: skytemple-rust
       - type: file
         url: https://files.pythonhosted.org/packages/5b/76/6ebf4728d287527514b29bc92c14ec59f666f43b0af650df6c100614c3dc/setuptools_rust-1.5.1-py3-none-any.whl
@@ -97,7 +97,7 @@ modules:
       - install -Dm644 org.skytemple.SkyTemple.appdata.xml /app/share/metainfo/org.skytemple.SkyTemple.appdata.xml
     sources:
       - type: archive
-        url: https://github.com/SkyTemple/skytemple/archive/refs/tags/1.5.1.tar.gz
-        sha256: db15148eb533726b4cb843987e56571af34ed00d246d783c9f3ed1920bd9a0d5
+        url: https://github.com/SkyTemple/skytemple/archive/refs/tags/1.5.2.tar.gz
+        sha256: 039d64b8d37a1c1f37f9b72e1d6266f1b2a5dddc026307009391730467e7b021
       - type: file
         path: run.sh

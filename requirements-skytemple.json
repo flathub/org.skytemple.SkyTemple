@@ -26,7 +26,7 @@
             "name": "python3-skytemple-files",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"skytemple-files[spritecollab]==1.5.1\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"skytemple-files[spritecollab]==1.5.2\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -116,8 +116,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ee/14/fc6330e3817b9d0eb5e6008c7dedf79a8a46d4e7ed10e30c88081700185e/skytemple_files-1.5.1-py3-none-any.whl",
-                    "sha256": "3057f0eb39793ec85ab5839b98795397fa154274a26572fc35a5ac9d26f0f3a8"
+                    "url": "https://files.pythonhosted.org/packages/8a/56/67c14c55433d7b0625918235b0f7bc12ec8aa5c258ca5d6c276c575db65a/skytemple_files-1.5.2-py3-none-any.whl",
+                    "sha256": "ebefb9cbc423d3b29476b34cc3ffbf86e39f14b5b8a2e6ffcd1768ea67702b06"
                 },
                 {
                     "type": "file",
@@ -126,8 +126,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/2c/ee/dce9d96d4d88d20a2d820917cac4f75e345181907c46d3c4459714c64f29/skytemple-rust-1.5.1.tar.gz",
-                    "sha256": "a9890971c164b3ede896dd620385de46aee072d1ffd5a47e8d4d4bc39a9f31d4"
+                    "url": "https://files.pythonhosted.org/packages/49/75/5d8b0b0027198b4038f7a636b7aecd2d9163c18d0c3f592c1ebc3d99dda0/skytemple-rust-1.5.3.tar.gz",
+                    "sha256": "f26f7d20d496c0edea6a090e07767cc28ba5559d770b141567aa55fc297d2842"
                 },
                 {
                     "type": "file",
@@ -151,8 +151,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/79/da/138e76e2e9ecf074a5ee26cacbd0676e1efdfff2bda3e6f40a6dc8728bf3/lru-dict-1.1.8.tar.gz",
-                    "sha256": "878bc8ef4073e5cfb953dfc1cf4585db41e8b814c0106abde34d00ee0d0b3115"
+                    "url": "https://files.pythonhosted.org/packages/83/63/21480e8ecc218b9b15672d194ea79da8a7389737c21d8406254306733cac/lru-dict-1.2.0.tar.gz",
+                    "sha256": "13c56782f19d68ddf4d8db0170041192859616514c706b126d0df2ec72a11bd7"
                 },
                 {
                     "type": "file",
@@ -254,8 +254,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/2c/ee/dce9d96d4d88d20a2d820917cac4f75e345181907c46d3c4459714c64f29/skytemple-rust-1.5.1.tar.gz",
-                    "sha256": "a9890971c164b3ede896dd620385de46aee072d1ffd5a47e8d4d4bc39a9f31d4"
+                    "url": "https://files.pythonhosted.org/packages/49/75/5d8b0b0027198b4038f7a636b7aecd2d9163c18d0c3f592c1ebc3d99dda0/skytemple-rust-1.5.3.tar.gz",
+                    "sha256": "f26f7d20d496c0edea6a090e07767cc28ba5559d770b141567aa55fc297d2842"
                 },
                 {
                     "type": "file",
@@ -299,8 +299,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ee/14/fc6330e3817b9d0eb5e6008c7dedf79a8a46d4e7ed10e30c88081700185e/skytemple_files-1.5.1-py3-none-any.whl",
-                    "sha256": "3057f0eb39793ec85ab5839b98795397fa154274a26572fc35a5ac9d26f0f3a8"
+                    "url": "https://files.pythonhosted.org/packages/8a/56/67c14c55433d7b0625918235b0f7bc12ec8aa5c258ca5d6c276c575db65a/skytemple_files-1.5.2-py3-none-any.whl",
+                    "sha256": "ebefb9cbc423d3b29476b34cc3ffbf86e39f14b5b8a2e6ffcd1768ea67702b06"
                 },
                 {
                     "type": "file",
@@ -439,8 +439,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/2c/ee/dce9d96d4d88d20a2d820917cac4f75e345181907c46d3c4459714c64f29/skytemple-rust-1.5.1.tar.gz",
-                    "sha256": "a9890971c164b3ede896dd620385de46aee072d1ffd5a47e8d4d4bc39a9f31d4"
+                    "url": "https://files.pythonhosted.org/packages/49/75/5d8b0b0027198b4038f7a636b7aecd2d9163c18d0c3f592c1ebc3d99dda0/skytemple-rust-1.5.3.tar.gz",
+                    "sha256": "f26f7d20d496c0edea6a090e07767cc28ba5559d770b141567aa55fc297d2842"
                 },
                 {
                     "type": "file",
@@ -484,8 +484,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ee/14/fc6330e3817b9d0eb5e6008c7dedf79a8a46d4e7ed10e30c88081700185e/skytemple_files-1.5.1-py3-none-any.whl",
-                    "sha256": "3057f0eb39793ec85ab5839b98795397fa154274a26572fc35a5ac9d26f0f3a8"
+                    "url": "https://files.pythonhosted.org/packages/8a/56/67c14c55433d7b0625918235b0f7bc12ec8aa5c258ca5d6c276c575db65a/skytemple_files-1.5.2-py3-none-any.whl",
+                    "sha256": "ebefb9cbc423d3b29476b34cc3ffbf86e39f14b5b8a2e6ffcd1768ea67702b06"
                 },
                 {
                     "type": "file",
@@ -700,8 +700,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/7b/f5/890a0baca17a61c1f92f72b81d3c31523c99bec609e60c292ea55b387ae8/urllib3-1.26.15-py2.py3-none-any.whl",
-                    "sha256": "aa751d169e23c7479ce47a0cb0da579e3ede798f994f5816a74e4f4500dcea42"
+                    "url": "https://files.pythonhosted.org/packages/c5/05/c214b32d21c0b465506f95c4f28ccbcba15022e000b043b72b3df7728471/urllib3-1.26.16-py2.py3-none-any.whl",
+                    "sha256": "8d36afa7616d8ab714608411b4a3b13e58f463aee519024578e062e141dce20f"
                 },
                 {
                     "type": "file",
