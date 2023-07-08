@@ -97,12 +97,7 @@ modules:
       - install -Dm644 org.skytemple.SkyTemple.appdata.xml /app/share/metainfo/org.skytemple.SkyTemple.appdata.xml
     sources:
       - type: archive
-        url: https://github.com/SkyTemple/skytemple/archive/refs/tags/1.5.3.tar.gz
-        sha256: f3ce0af3c2862cb4eb77317263fe6da63171d823988165d382f4c934b52c9175
+        url: https://github.com/SkyTemple/skytemple/archive/refs/tags/1.5.4.tar.gz
+        sha256: a20209e579a5b8e6874f7a77d06a2b3ec1ff337385dd03d3c8e918bce5e871cd
       - type: file
         path: run.sh
-      # I forgot to update the appdata in the release tag oops
-      - type: file
-        url: https://raw.githubusercontent.com/SkyTemple/skytemple/27ed45d65b182946ceecd71afd2423e3e951e540/org.skytemple.SkyTemple.appdata.xml
-        dest-filename: org.skytemple.SkyTemple.appdata.xml
-        sha256: d6971fbc48ace9af7935e3e7717b2384642ffb470c993cbd7b4df97da339ab59

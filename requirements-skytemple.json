@@ -26,7 +26,7 @@
             "name": "python3-skytemple-files",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"skytemple-files[spritecollab]==1.5.2\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"skytemple-files[spritecollab]==1.5.4\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -86,13 +86,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c2/f1/df59e28c642d583f7dacffb1e0965d0e00b218e0186d7858ac5233dce840/click-8.1.3-py3-none-any.whl",
-                    "sha256": "bb4d8133cb15a609f44e8213d9b391b0809795062913b383c62be0ee95b1db48"
+                    "url": "https://files.pythonhosted.org/packages/f9/a6/dc327484918f1656cc9fcebebe77efcfc0ef0d447fa925a8760ee55abe0e/click-8.1.4-py3-none-any.whl",
+                    "sha256": "2739815aaa5d2c986a88f1e9230c55e17f0caad3d958a5e13ad0797c166db9e3"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ff/d7/8d757f8bd45be079d76309248845a04f09619a7b17d6dfc8c9ff6433cac2/charset-normalizer-3.1.0.tar.gz",
-                    "sha256": "34e0a2f9c370eb95597aae63bf85eb5e96826d81e3dcf88b8886012906f509b5"
+                    "url": "https://files.pythonhosted.org/packages/2a/53/cf0a48de1bdcf6ff6e1c9a023f5f523dfe303e4024f216feac64b6eb7f67/charset-normalizer-3.2.0.tar.gz",
+                    "sha256": "3bb3d25a8e6c0aedd251753a79ae98a093c7e7b471faa3aa9a93a81431987ace"
                 },
                 {
                     "type": "file",
@@ -116,8 +116,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/8a/56/67c14c55433d7b0625918235b0f7bc12ec8aa5c258ca5d6c276c575db65a/skytemple_files-1.5.2-py3-none-any.whl",
-                    "sha256": "ebefb9cbc423d3b29476b34cc3ffbf86e39f14b5b8a2e6ffcd1768ea67702b06"
+                    "url": "https://files.pythonhosted.org/packages/c2/af/9939ca70f30d6714e0dd30b395be57ca1437ec1b9d19e9a697e0746333f2/skytemple_files-1.5.4-py3-none-any.whl",
+                    "sha256": "ebaf43078651df715b42c04a7799499de519dfc56ed0ffa05c4de99203e6fb28"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/0f/8b/2ebaf9adcf4260c00f842154865f8730cf745906aa5dd499141fb6063e26/Pillow-10.0.0.tar.gz",
+                    "sha256": "9c82b5b3e043c7af0d95792d0d20ccf68f61a1fec6b3530e718b688422727396"
                 },
                 {
                     "type": "file",
@@ -141,11 +146,6 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/00/d5/4903f310765e0ff2b8e91ffe55031ac6af77d982f0156061e20a4d1a8b2d/Pillow-9.5.0.tar.gz",
-                    "sha256": "bf548479d336726d7a0eceb6e767e179fbde37833ae42794602631a070d630f1"
-                },
-                {
-                    "type": "file",
                     "url": "https://files.pythonhosted.org/packages/12/e0/7e24c6259591bc1ebedaa9f992ccc593456004d8edfec4f0ba02ea9de81e/ndspy-3.0.0-py3-none-any.whl",
                     "sha256": "800c9e6154fdee2712657c0be9cea5f2c7c1f513f26e3344ac3b16d9d1fca478"
                 },
@@ -166,8 +166,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/43/4f/43e274d91e05b9abf35795dd9722f1c80f30b90f05709f562b51aa3c4c29/explorerscript-0.1.2-py3-none-any.whl",
-                    "sha256": "8ac76464158bc92a9bead303f46a4007a0210bc2851c4ca02825dcdd009afcaf"
+                    "url": "https://files.pythonhosted.org/packages/a3/29/9c928475d3421b084287ee3a79cac83e88f365639d48072fdefe542afad7/explorerscript-0.1.3-py3-none-any.whl",
+                    "sha256": "9c363559f7485940200afc4e1f8594c1cea7664841b8148737ae64930f6c0876"
                 },
                 {
                     "type": "file",
@@ -244,8 +244,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c2/f1/df59e28c642d583f7dacffb1e0965d0e00b218e0186d7858ac5233dce840/click-8.1.3-py3-none-any.whl",
-                    "sha256": "bb4d8133cb15a609f44e8213d9b391b0809795062913b383c62be0ee95b1db48"
+                    "url": "https://files.pythonhosted.org/packages/f9/a6/dc327484918f1656cc9fcebebe77efcfc0ef0d447fa925a8760ee55abe0e/click-8.1.4-py3-none-any.whl",
+                    "sha256": "2739815aaa5d2c986a88f1e9230c55e17f0caad3d958a5e13ad0797c166db9e3"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/0f/8b/2ebaf9adcf4260c00f842154865f8730cf745906aa5dd499141fb6063e26/Pillow-10.0.0.tar.gz",
+                    "sha256": "9c82b5b3e043c7af0d95792d0d20ccf68f61a1fec6b3530e718b688422727396"
                 },
                 {
                     "type": "file",
@@ -279,8 +284,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/43/4f/43e274d91e05b9abf35795dd9722f1c80f30b90f05709f562b51aa3c4c29/explorerscript-0.1.2-py3-none-any.whl",
-                    "sha256": "8ac76464158bc92a9bead303f46a4007a0210bc2851c4ca02825dcdd009afcaf"
+                    "url": "https://files.pythonhosted.org/packages/a3/29/9c928475d3421b084287ee3a79cac83e88f365639d48072fdefe542afad7/explorerscript-0.1.3-py3-none-any.whl",
+                    "sha256": "9c363559f7485940200afc4e1f8594c1cea7664841b8148737ae64930f6c0876"
                 },
                 {
                     "type": "file",
@@ -299,13 +304,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/8a/56/67c14c55433d7b0625918235b0f7bc12ec8aa5c258ca5d6c276c575db65a/skytemple_files-1.5.2-py3-none-any.whl",
-                    "sha256": "ebefb9cbc423d3b29476b34cc3ffbf86e39f14b5b8a2e6ffcd1768ea67702b06"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/00/d5/4903f310765e0ff2b8e91ffe55031ac6af77d982f0156061e20a4d1a8b2d/Pillow-9.5.0.tar.gz",
-                    "sha256": "bf548479d336726d7a0eceb6e767e179fbde37833ae42794602631a070d630f1"
+                    "url": "https://files.pythonhosted.org/packages/c2/af/9939ca70f30d6714e0dd30b395be57ca1437ec1b9d19e9a697e0746333f2/skytemple_files-1.5.4-py3-none-any.whl",
+                    "sha256": "ebaf43078651df715b42c04a7799499de519dfc56ed0ffa05c4de99203e6fb28"
                 },
                 {
                     "type": "file",
@@ -375,8 +375,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/00/d5/4903f310765e0ff2b8e91ffe55031ac6af77d982f0156061e20a4d1a8b2d/Pillow-9.5.0.tar.gz",
-                    "sha256": "bf548479d336726d7a0eceb6e767e179fbde37833ae42794602631a070d630f1"
+                    "url": "https://files.pythonhosted.org/packages/0f/8b/2ebaf9adcf4260c00f842154865f8730cf745906aa5dd499141fb6063e26/Pillow-10.0.0.tar.gz",
+                    "sha256": "9c82b5b3e043c7af0d95792d0d20ccf68f61a1fec6b3530e718b688422727396"
                 },
                 {
                     "type": "file",
@@ -385,8 +385,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c2/f1/df59e28c642d583f7dacffb1e0965d0e00b218e0186d7858ac5233dce840/click-8.1.3-py3-none-any.whl",
-                    "sha256": "bb4d8133cb15a609f44e8213d9b391b0809795062913b383c62be0ee95b1db48"
+                    "url": "https://files.pythonhosted.org/packages/f9/a6/dc327484918f1656cc9fcebebe77efcfc0ef0d447fa925a8760ee55abe0e/click-8.1.4-py3-none-any.whl",
+                    "sha256": "2739815aaa5d2c986a88f1e9230c55e17f0caad3d958a5e13ad0797c166db9e3"
                 },
                 {
                     "type": "file",
@@ -424,13 +424,18 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c2/f1/df59e28c642d583f7dacffb1e0965d0e00b218e0186d7858ac5233dce840/click-8.1.3-py3-none-any.whl",
-                    "sha256": "bb4d8133cb15a609f44e8213d9b391b0809795062913b383c62be0ee95b1db48"
+                    "url": "https://files.pythonhosted.org/packages/f9/a6/dc327484918f1656cc9fcebebe77efcfc0ef0d447fa925a8760ee55abe0e/click-8.1.4-py3-none-any.whl",
+                    "sha256": "2739815aaa5d2c986a88f1e9230c55e17f0caad3d958a5e13ad0797c166db9e3"
                 },
                 {
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/6b/b0/e595ce2a2527e169c3bcd6c33d2473c1918e0b7f6826a043ca1245dd4e5b/crcmod-1.7.tar.gz",
                     "sha256": "dc7051a0db5f2bd48665a990d3ec1cc305a466a77358ca4492826f41f283601e"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/0f/8b/2ebaf9adcf4260c00f842154865f8730cf745906aa5dd499141fb6063e26/Pillow-10.0.0.tar.gz",
+                    "sha256": "9c82b5b3e043c7af0d95792d0d20ccf68f61a1fec6b3530e718b688422727396"
                 },
                 {
                     "type": "file",
@@ -451,11 +456,6 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/54/4c/a741dddab6ad96f257d90cb4d23067ffadac526c9cab3a99ca6ce3c05477/pyenchant-3.2.2-py3-none-any.whl",
                     "sha256": "5facc821ece957208a81423af7d6ec7810dad29697cb0d77aae81e4e11c8e5a6"
-                },
-                {
-                    "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/00/d5/4903f310765e0ff2b8e91ffe55031ac6af77d982f0156061e20a4d1a8b2d/Pillow-9.5.0.tar.gz",
-                    "sha256": "bf548479d336726d7a0eceb6e767e179fbde37833ae42794602631a070d630f1"
                 },
                 {
                     "type": "file",
@@ -484,8 +484,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/8a/56/67c14c55433d7b0625918235b0f7bc12ec8aa5c258ca5d6c276c575db65a/skytemple_files-1.5.2-py3-none-any.whl",
-                    "sha256": "ebefb9cbc423d3b29476b34cc3ffbf86e39f14b5b8a2e6ffcd1768ea67702b06"
+                    "url": "https://files.pythonhosted.org/packages/c2/af/9939ca70f30d6714e0dd30b395be57ca1437ec1b9d19e9a697e0746333f2/skytemple_files-1.5.4-py3-none-any.whl",
+                    "sha256": "ebaf43078651df715b42c04a7799499de519dfc56ed0ffa05c4de99203e6fb28"
                 },
                 {
                     "type": "file",
@@ -524,8 +524,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/43/4f/43e274d91e05b9abf35795dd9722f1c80f30b90f05709f562b51aa3c4c29/explorerscript-0.1.2-py3-none-any.whl",
-                    "sha256": "8ac76464158bc92a9bead303f46a4007a0210bc2851c4ca02825dcdd009afcaf"
+                    "url": "https://files.pythonhosted.org/packages/a3/29/9c928475d3421b084287ee3a79cac83e88f365639d48072fdefe542afad7/explorerscript-0.1.3-py3-none-any.whl",
+                    "sha256": "9c363559f7485940200afc4e1f8594c1cea7664841b8148737ae64930f6c0876"
                 },
                 {
                     "type": "file",
