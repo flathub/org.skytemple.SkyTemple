@@ -4,7 +4,7 @@
  [[package]]
  name = "skytemple_rust"
  version = "1.6.0"
--source = "git+https://github.com/SkyTemple/skytemple-rust.git#48a7a5f58d3416507bb28d1b123ab07a3bc05fb3"
+-source = "git+https://github.com/SkyTemple/skytemple-rust.git?tag=1.6.0b1#e15b915540b78423561354be626f8eaf4f85bda5"
  dependencies = [
   "bytes",
   "encoding",
@@ -15,8 +15,8 @@
  
  [dependencies]
  desmume-rs = "0.1"
--skytemple_rust = { git = "https://github.com/SkyTemple/skytemple-rust.git", default-features = false, features = ["script_var_table"] }
+-skytemple_rust = { git = "https://github.com/SkyTemple/skytemple-rust.git", default-features = false, features = ["script_var_table"], tag = "1.6.0b1" }
 +skytemple_rust = { path = "../skytemple-rust", default-features = false, features = ["script_var_table"] }
- pyo3 = { version = "0.18", features = ["extension-module"] }
+ pyo3 = { version = "0.19", features = ["extension-module"] }
  pyo3-log = "0.8"
  log = "0.4"

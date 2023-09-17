@@ -65,7 +65,7 @@ modules:
         sha256: 939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc
       - type: git
         url: https://github.com/SkyTemple/skytemple-rust.git
-        tag: "1.6.0a3"
+        tag: "1.6.0b1"
         dest: skytemple-rust
       - type: file
         url: https://files.pythonhosted.org/packages/5b/be/8d88f5982d61fefa2cbc633b167d2553875169eee136b584089667c37e93/setuptools_rust-1.7.0-py3-none-any.whl
@@ -113,7 +113,7 @@ modules:
         sha256: 1c5a46660dfbe5f45ef7588d78429d04ebdb6f84b96b4b015033572d2facbbe5
       - type: git
         url: https://github.com/SkyTemple/skytemple-ssb-emulator.git
-        tag: "1.6.0a1-1"
+        tag: "1.6.0b1"
         dest: ssb-emulator
       - type: file
         url: https://files.pythonhosted.org/packages/5b/76/6ebf4728d287527514b29bc92c14ec59f666f43b0af650df6c100614c3dc/setuptools_rust-1.5.1-py3-none-any.whl
@@ -124,9 +124,18 @@ modules:
         path: patches/ssb_emulator_cargo.patch
       - type: git
         url: https://github.com/SkyTemple/skytemple-rust.git
-        tag: "1.6.0a1"
+        tag: "1.6.0b1"
         dest: skytemple-rust
   - requirements-skytemple.json
+  # Somehow not recognized by the builder tools
+  - name: python3-wheel
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --ignore-installed --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "wheel==0.41.2 "
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/b8/8b/31273bf66016be6ad22bb7345c37ff350276cfd46e389a0c2ac5da9d9073/wheel-0.41.2-py3-none-any.whl
+        sha256: 75909db2664838d015e3d9139004ee16711748a52c8f336b52882266540215d8
   - name: skytemple
     buildsystem: simple
     build-commands:
@@ -145,7 +154,7 @@ modules:
       - install -Dm644 org.skytemple.SkyTemple.appdata.xml /app/share/metainfo/org.skytemple.SkyTemple.appdata.xml
     sources:
       - type: archive
-        url: https://github.com/SkyTemple/skytemple/archive/refs/tags/1.6.0a4.tar.gz
-        sha256: c093d659991089d8d5d183fa8e2c72fceed45b19803110137db8608874f6d82c
+        url: https://github.com/SkyTemple/skytemple/archive/refs/tags/1.6.0b1.tar.gz
+        sha256: 9094b4075772b502136942ad634cafc5450e9b63164f3475c80927a6f2a45b37
       - type: file
         path: run.sh
