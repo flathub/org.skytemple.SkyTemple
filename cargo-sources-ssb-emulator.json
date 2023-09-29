@@ -2,8 +2,8 @@
     {
         "type": "git",
         "url": "https://github.com/skytemple/skytemple-rust",
-        "commit": "e15b915540b78423561354be626f8eaf4f85bda5",
-        "dest": "flatpak-cargo/git/skytemple-rust-e15b915"
+        "commit": "db7fcebcf98f4c255d29c4800246b22e3e075871",
+        "dest": "flatpak-cargo/git/skytemple-rust-db7fceb"
     },
     {
         "type": "archive",
@@ -957,7 +957,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/skytemple-rust-e15b915/.\" \"cargo/vendor/skytemple_rust\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/skytemple-rust-db7fceb/.\" \"cargo/vendor/skytemple_rust\""
         ]
     },
     {
@@ -969,7 +969,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/skytemple-rust-e15b915/skytemple_rust_macros\" \"cargo/vendor/skytemple_rust_macros\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/skytemple-rust-db7fceb/skytemple_rust_macros\" \"cargo/vendor/skytemple_rust_macros\""
         ]
     },
     {
@@ -981,7 +981,7 @@
     {
         "type": "shell",
         "commands": [
-            "cp -r --reflink=auto \"flatpak-cargo/git/skytemple-rust-e15b915/skytemple_rust_macros_no_py\" \"cargo/vendor/skytemple_rust_macros_no_py\""
+            "cp -r --reflink=auto \"flatpak-cargo/git/skytemple-rust-db7fceb/skytemple_rust_macros_no_py\" \"cargo/vendor/skytemple_rust_macros_no_py\""
         ]
     },
     {
@@ -1317,7 +1317,7 @@
     },
     {
         "type": "inline",
-        "contents": "[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/skytemple/skytemple-rust\"]\ngit = \"https://github.com/skytemple/skytemple-rust\"\nreplace-with = \"vendored-sources\"\ntag = \"1.6.0b1\"\n",
+        "contents": "[source.vendored-sources]\ndirectory = \"cargo/vendor\"\n\n[source.crates-io]\nreplace-with = \"vendored-sources\"\n\n[source.\"https://github.com/skytemple/skytemple-rust\"]\ngit = \"https://github.com/skytemple/skytemple-rust\"\nreplace-with = \"vendored-sources\"\ntag = \"1.6.0rc1\"\n",
         "dest": "cargo",
         "dest-filename": "config"
     }
