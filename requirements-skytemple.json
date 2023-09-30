@@ -26,7 +26,7 @@
             "name": "python3-skytemple-files",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"skytemple-files[spritecollab]==1.6.0b1\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"skytemple-files[spritecollab]==1.6.0rc1\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -91,13 +91,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/f0/78/530393ca23c976ef2facf4c688132d7c3d5da68ea44df41cb918f9286486/skytemple_files-1.6.0b1-py3-none-any.whl",
-                    "sha256": "1567f7706e48717951ca0c42136a6807334a699b1a2f49d8ba1ae7b7363bd2af"
+                    "url": "https://files.pythonhosted.org/packages/26/f7/2788898842ccb412405d181b79c5341d5f40b0cdb66c3aaa1c5eac035249/skytemple_files-1.6.0rc1-py3-none-any.whl",
+                    "sha256": "7358176e707696b8ecf5a271bbd2a85d4ba84d1a15caf3e65010a059d7bf0c37"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/31/ac/03220e5f893b16cb1d6b66952e955283654c976af7376d837af0d597fe30/skytemple-rust-1.6.0b1.tar.gz",
-                    "sha256": "e4b11b150b8c9788a294dcb3e4e06401204e6ea17d3685ff94399b8c0fdd20e9"
+                    "url": "https://files.pythonhosted.org/packages/c7/2f/4b0792c23638afcbb665008ef0759fe3230bfa176213476998cf7cd205f4/skytemple-rust-1.6.0rc1.tar.gz",
+                    "sha256": "d48d0fc9901c9a458e625cf27ae79b25be3d0dd7986e7003ac741b0431902a0a"
                 },
                 {
                     "type": "file",
@@ -151,8 +151,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e0/f3/61889587e71b22cb498124fad7c9518778f1404d6a7e295dd82f848da2d6/pmdsky_debug_py-7.0.17-py3-none-any.whl",
-                    "sha256": "6364ac952b4af3e4a74fc4b608ba611031c0c0a9d862ebed244f87886f4a9561"
+                    "url": "https://files.pythonhosted.org/packages/fb/69/dc3a415f806ff49bfbc4fc128becf4d7c56684734a072066d585d556e4d5/pmdsky_debug_py-8.0.4-py3-none-any.whl",
+                    "sha256": "c081c02f5f831473cf0cba0315b873bd02eb4b3dc763c1502f115371e7ab71d4"
                 },
                 {
                     "type": "file",
@@ -170,8 +170,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e0/f3/61889587e71b22cb498124fad7c9518778f1404d6a7e295dd82f848da2d6/pmdsky_debug_py-7.0.17-py3-none-any.whl",
-                    "sha256": "6364ac952b4af3e4a74fc4b608ba611031c0c0a9d862ebed244f87886f4a9561"
+                    "url": "https://files.pythonhosted.org/packages/fb/69/dc3a415f806ff49bfbc4fc128becf4d7c56684734a072066d585d556e4d5/pmdsky_debug_py-8.0.4-py3-none-any.whl",
+                    "sha256": "c081c02f5f831473cf0cba0315b873bd02eb4b3dc763c1502f115371e7ab71d4"
                 }
             ]
         },
@@ -179,7 +179,7 @@
             "name": "python3-skytemple-dtef",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"skytemple-dtef==1.6.0a3\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"skytemple-dtef==1.6.0\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -194,8 +194,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/31/ac/03220e5f893b16cb1d6b66952e955283654c976af7376d837af0d597fe30/skytemple-rust-1.6.0b1.tar.gz",
-                    "sha256": "e4b11b150b8c9788a294dcb3e4e06401204e6ea17d3685ff94399b8c0fdd20e9"
+                    "url": "https://files.pythonhosted.org/packages/c7/2f/4b0792c23638afcbb665008ef0759fe3230bfa176213476998cf7cd205f4/skytemple-rust-1.6.0rc1.tar.gz",
+                    "sha256": "d48d0fc9901c9a458e625cf27ae79b25be3d0dd7986e7003ac741b0431902a0a"
                 },
                 {
                     "type": "file",
@@ -229,8 +229,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e0/f3/61889587e71b22cb498124fad7c9518778f1404d6a7e295dd82f848da2d6/pmdsky_debug_py-7.0.17-py3-none-any.whl",
-                    "sha256": "6364ac952b4af3e4a74fc4b608ba611031c0c0a9d862ebed244f87886f4a9561"
+                    "url": "https://files.pythonhosted.org/packages/fb/69/dc3a415f806ff49bfbc4fc128becf4d7c56684734a072066d585d556e4d5/pmdsky_debug_py-8.0.4-py3-none-any.whl",
+                    "sha256": "c081c02f5f831473cf0cba0315b873bd02eb4b3dc763c1502f115371e7ab71d4"
                 },
                 {
                     "type": "file",
@@ -239,8 +239,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/f0/78/530393ca23c976ef2facf4c688132d7c3d5da68ea44df41cb918f9286486/skytemple_files-1.6.0b1-py3-none-any.whl",
-                    "sha256": "1567f7706e48717951ca0c42136a6807334a699b1a2f49d8ba1ae7b7363bd2af"
+                    "url": "https://files.pythonhosted.org/packages/26/f7/2788898842ccb412405d181b79c5341d5f40b0cdb66c3aaa1c5eac035249/skytemple_files-1.6.0rc1-py3-none-any.whl",
+                    "sha256": "7358176e707696b8ecf5a271bbd2a85d4ba84d1a15caf3e65010a059d7bf0c37"
                 },
                 {
                     "type": "file",
@@ -249,8 +249,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/6a/7d/87dc2334bfaf609bd78ee7da4b63b0cc1d1ee77d3ea79dc8819827b58612/skytemple_dtef-1.6.0a3-py3-none-any.whl",
-                    "sha256": "f0d3a05fb0b90e016ae771e2e67f35de930ebf9a53067ed5eadcb4ec620c4c63"
+                    "url": "https://files.pythonhosted.org/packages/45/10/dc4deca33e1b3e5c9f1093daea8bc75d44a997a67087840b7437f61a09e2/skytemple_dtef-1.6.0-py3-none-any.whl",
+                    "sha256": "5894380e4cfae108cbcfedd69b9b3f211159609692cc350cdb19388742f67544"
                 }
             ]
         },
@@ -364,7 +364,7 @@
             "name": "python3-skytemple-ssb-debugger",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"skytemple-ssb-debugger==1.6.0b1\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"skytemple-ssb-debugger==1.6.0rc1\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -374,8 +374,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/31/ac/03220e5f893b16cb1d6b66952e955283654c976af7376d837af0d597fe30/skytemple-rust-1.6.0b1.tar.gz",
-                    "sha256": "e4b11b150b8c9788a294dcb3e4e06401204e6ea17d3685ff94399b8c0fdd20e9"
+                    "url": "https://files.pythonhosted.org/packages/c7/2f/4b0792c23638afcbb665008ef0759fe3230bfa176213476998cf7cd205f4/skytemple-rust-1.6.0rc1.tar.gz",
+                    "sha256": "d48d0fc9901c9a458e625cf27ae79b25be3d0dd7986e7003ac741b0431902a0a"
                 },
                 {
                     "type": "file",
@@ -404,8 +404,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/b2/6c/9b1949ff63cbb1c036adc07d2988b78616e640cb3073f65dbe3bc6bbdf5b/skytemple-ssb-emulator-1.6.0b1.tar.gz",
-                    "sha256": "92b1e1f20beea222ac7318a657a223d7d87525088ce2a4dd242c20e1de8d339a"
+                    "url": "https://files.pythonhosted.org/packages/c8/ca/ca04b9642ca493ca1c93bc0592a72935ef6c4185ecf418320d7e4eb02ab6/skytemple-ssb-emulator-1.6.0.tar.gz",
+                    "sha256": "51d754cb6b6bfcd8808b6cd06265140aa5eeb44e454b958c1a1d59fc1548ff56"
                 },
                 {
                     "type": "file",
@@ -419,13 +419,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e0/f3/61889587e71b22cb498124fad7c9518778f1404d6a7e295dd82f848da2d6/pmdsky_debug_py-7.0.17-py3-none-any.whl",
-                    "sha256": "6364ac952b4af3e4a74fc4b608ba611031c0c0a9d862ebed244f87886f4a9561"
+                    "url": "https://files.pythonhosted.org/packages/fb/69/dc3a415f806ff49bfbc4fc128becf4d7c56684734a072066d585d556e4d5/pmdsky_debug_py-8.0.4-py3-none-any.whl",
+                    "sha256": "c081c02f5f831473cf0cba0315b873bd02eb4b3dc763c1502f115371e7ab71d4"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/f0/78/530393ca23c976ef2facf4c688132d7c3d5da68ea44df41cb918f9286486/skytemple_files-1.6.0b1-py3-none-any.whl",
-                    "sha256": "1567f7706e48717951ca0c42136a6807334a699b1a2f49d8ba1ae7b7363bd2af"
+                    "url": "https://files.pythonhosted.org/packages/26/f7/2788898842ccb412405d181b79c5341d5f40b0cdb66c3aaa1c5eac035249/skytemple_files-1.6.0rc1-py3-none-any.whl",
+                    "sha256": "7358176e707696b8ecf5a271bbd2a85d4ba84d1a15caf3e65010a059d7bf0c37"
                 },
                 {
                     "type": "file",
@@ -469,8 +469,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/13/a8/d181ea0d4610e501f4c8279d5566ae5f5e47ddb3799fdc240e9e24c6a12c/skytemple_ssb_debugger-1.6.0b1-py3-none-any.whl",
-                    "sha256": "3575b2dc6679d63ea40e4bb79c583c70d697f559139b930d4a8465b8ceb3677d"
+                    "url": "https://files.pythonhosted.org/packages/e0/d5/ceccf6ca5e0b9da681f7388b96ab34eb8ca91c0e63087975a5182eadceeb/skytemple_ssb_debugger-1.6.0rc1-py3-none-any.whl",
+                    "sha256": "b9e5b4e721617ddf12a3a7f473ea62e685cb9d49c8f90e639643ae3794195999"
                 }
             ]
         },
@@ -535,8 +535,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/2b/a8/050ab4f0c3d4c1b8aaa805f70e26e84d0e27004907c5b8ecc1d31815f92a/cffi-1.15.1.tar.gz",
-                    "sha256": "d400bfb9a37b1351253cb402671cea7e89bdecc294e8016a707f6d1d8ac934f9"
+                    "url": "https://files.pythonhosted.org/packages/68/ce/95b0bae7968c65473e1298efb042e10cafc7bafc14d9e4f154008241c91d/cffi-1.16.0.tar.gz",
+                    "sha256": "bcb3ef43e58665bbda2fb198698fcae6776483e0c4a631aa5647806c25e02cc0"
                 },
                 {
                     "type": "file",
@@ -622,8 +622,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/9b/81/62fd61001fa4b9d0df6e31d47ff49cfa9de4af03adecf339c7bc30656b37/urllib3-2.0.4-py3-none-any.whl",
-                    "sha256": "de7df1803967d2c2a98e4b11bb7d6bd9210474c46e8a0401514e3a42a75ebde4"
+                    "url": "https://files.pythonhosted.org/packages/37/dc/399e63f5d1d96bb643404ee830657f4dfcf8503f5ba8fa3c6d465d0c57fe/urllib3-2.0.5-py3-none-any.whl",
+                    "sha256": "ef16afa8ba34a1f989db38e1dbbe0c302e4289a47856990d0682e374563ce35e"
                 },
                 {
                     "type": "file",
@@ -646,8 +646,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/2b/a8/050ab4f0c3d4c1b8aaa805f70e26e84d0e27004907c5b8ecc1d31815f92a/cffi-1.15.1.tar.gz",
-                    "sha256": "d400bfb9a37b1351253cb402671cea7e89bdecc294e8016a707f6d1d8ac934f9"
+                    "url": "https://files.pythonhosted.org/packages/68/ce/95b0bae7968c65473e1298efb042e10cafc7bafc14d9e4f154008241c91d/cffi-1.16.0.tar.gz",
+                    "sha256": "bcb3ef43e58665bbda2fb198698fcae6776483e0c4a631aa5647806c25e02cc0"
                 },
                 {
                     "type": "file",
