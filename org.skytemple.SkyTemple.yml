@@ -1,12 +1,13 @@
 app-id: org.skytemple.SkyTemple
 runtime: org.gnome.Platform
-runtime-version: '44'
+runtime-version: '45'
 sdk: org.gnome.Sdk
 command: run.sh
 finish-args:
   - "--share=network"
   - "--socket=fallback-x11"
   - "--socket=wayland"
+  - "--socket=pulseaudio"
   - "--share=ipc"
   - "--filesystem=host"
   - "--filesystem=xdg-run/app/com.discordapp.Discord:create"
@@ -59,16 +60,19 @@ modules:
       - type: file
         url: https://files.pythonhosted.org/packages/d9/5f/2daccd14278b6b780ae6799f85998377c06019354982391245f4b58a927d/setuptools-65.3.0-py3-none-any.whl
         sha256: 2e24e0bec025f035a2e72cdd1961119f557d78ad331bb00ff82efb2ab8da8e82
+      - type: file
+        url: https://files.pythonhosted.org/packages/97/75/10a9ebee3fd790d20926a90a2547f0bf78f371b2f13aa822c759680ca7b9/tomli-2.0.1-py3-none-any.whl
+        sha256: 939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc
       - type: git
         url: https://github.com/SkyTemple/skytemple-rust.git
-        tag: "1.5.3"
+        tag: "1.6.1"
         dest: skytemple-rust
       - type: file
-        url: https://files.pythonhosted.org/packages/5b/76/6ebf4728d287527514b29bc92c14ec59f666f43b0af650df6c100614c3dc/setuptools_rust-1.5.1-py3-none-any.whl
-        sha256: 306b236ff3aa5229180e58292610d0c2c51bb488191122d2fc559ae4caeb7d5e
+        url: https://files.pythonhosted.org/packages/5b/be/8d88f5982d61fefa2cbc633b167d2553875169eee136b584089667c37e93/setuptools_rust-1.7.0-py3-none-any.whl
+        sha256: 071099885949132a2180d16abf907b60837e74b4085047ba7e9c0f5b365310c1
       - type: patch
         path: patches/skytemple_rust_setup_py.patch
-  # This is required by py-desmume.
+  # This is required by desmume-rs.
   - name: pcap
     buildsystem: autotools
     config-opts:
@@ -78,11 +82,71 @@ modules:
     - type: archive
       url: https://www.tcpdump.org/release/libpcap-1.10.1.tar.gz
       sha512: 56c314f19c2b857742bf8abcb1e78066986aaa95cec339b75a3c8b70a9fa2b5167da98708352f9ec97a1cea2700cfb4e040bda108d58ac46cec9b7deab88d171
+  # This needs to be done seperately due to some patches and the Rust compiler and Cargo packages required.
+  # Also this needs build isolation, unlike the rest.
+  - name: python3-skytemple-ssb-emulator
+    buildsystem: simple
+    build-commands:
+      - . /usr/lib/sdk/rust-stable/enable.sh && pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "./ssb-emulator"
+    build-options:
+      env:
+        CARGO_HOME: /run/build/python3-skytemple-ssb-emulator/cargo
+    sources:
+      - cargo-sources-ssb-emulator.json
+      - type: file
+        url: https://files.pythonhosted.org/packages/27/d6/003e593296a85fd6ed616ed962795b2f87709c3eee2bca4f6d0fe55c6d00/wheel-0.37.1-py2.py3-none-any.whl
+        sha256: 4bdcd7d840138086126cd09254dc6195fb4fc6f01c050a1d7236f2630db1d22a
+      - type: file
+        url: https://files.pythonhosted.org/packages/2e/49/565350c6fab3f5a3e2c46633290117060e70e2501544cdf3bde1d1d5d0fe/range_typed_integers-1.0.1-py3-none-any.whl
+        sha256: 35d39a41642503c5c5117e26798713f081b1beece1b2afd8f1ba70c8d90f63c5
+      - type: file
+        url: https://files.pythonhosted.org/packages/6a/23/8146aad7d88f4fcb3a6218f41a60f6c2d4e3a72de72da1825dc7c8f7877c/semantic_version-2.10.0-py2.py3-none-any.whl
+        sha256: de78a3b8e0feda74cabc54aab2da702113e33ac9d9eb9d2389bcf1f58b7d9177
+      - type: file
+        url: https://files.pythonhosted.org/packages/ed/d6/2afc375a8d55b8be879d6b4986d4f69f01115e795e36827fd3a40166028b/typing_extensions-4.3.0-py3-none-any.whl
+        sha256: 25642c956049920a5aa49edcdd6ab1e06d7e5d467fc00e0506c44ac86fbfca02
+      - type: file
+        url: https://files.pythonhosted.org/packages/d9/5f/2daccd14278b6b780ae6799f85998377c06019354982391245f4b58a927d/setuptools-65.3.0-py3-none-any.whl
+        sha256: 2e24e0bec025f035a2e72cdd1961119f557d78ad331bb00ff82efb2ab8da8e82
+      - type: file
+        url: https://files.pythonhosted.org/packages/ce/55/52776f722af3db59e1f15b15934d736c3dca31b4964a78fe8fdddf06ec57/meson-1.1.1-py3-none-any.whl
+        sha256: 1c5a46660dfbe5f45ef7588d78429d04ebdb6f84b96b4b015033572d2facbbe5
+      - type: git
+        url: https://github.com/SkyTemple/skytemple-ssb-emulator.git
+        tag: "1.6.1"
+        dest: ssb-emulator
+      - type: file
+        url: https://files.pythonhosted.org/packages/5b/76/6ebf4728d287527514b29bc92c14ec59f666f43b0af650df6c100614c3dc/setuptools_rust-1.5.1-py3-none-any.whl
+        sha256: 306b236ff3aa5229180e58292610d0c2c51bb488191122d2fc559ae4caeb7d5e
+      - type: patch
+        path: patches/ssb_emulator_setup_py.patch
+      - type: patch
+        path: patches/ssb_emulator_cargo.patch
+      - type: git
+        url: https://github.com/SkyTemple/skytemple-rust.git
+        tag: "1.6.0"
+        dest: skytemple-rust
   - requirements-skytemple.json
+  # Somehow not recognized by the builder tools
+  - name: python3-wheel
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --ignore-installed --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "wheel==0.41.2 "
+    sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/b8/8b/31273bf66016be6ad22bb7345c37ff350276cfd46e389a0c2ac5da9d9073/wheel-0.41.2-py3-none-any.whl
+        sha256: 75909db2664838d015e3d9139004ee16711748a52c8f336b52882266540215d8
+  - name: gtksourceview4
+    buildsystem: meson
+    sources:
+    - type: archive
+      url: https://download.gnome.org/sources/gtksourceview/4.8/gtksourceview-4.8.4.tar.xz
+      sha256: 7ec9d18fb283d1f84a3a3eff3b7a72b09a10c9c006597b3fbabbb5958420a87d
   - name: skytemple
     buildsystem: simple
     build-commands:
-      - pip3 install --prefix=/app --no-deps  .
+      - installer/generate-mo.sh
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}/links" --prefix=${FLATPAK_DEST} --no-deps .
       # Icons
       - install -Dm644 skytemple/data/icons/hicolor/16x16/apps/skytemple.png /app/share/icons/hicolor/16x16/apps/org.skytemple.SkyTemple.png
       - install -Dm644 skytemple/data/icons/hicolor/32x32/apps/skytemple.png /app/share/icons/hicolor/32x32/apps/org.skytemple.SkyTemple.png
@@ -96,8 +160,16 @@ modules:
       - install -Dm644 org.skytemple.SkyTemple.desktop /app/share/applications/org.skytemple.SkyTemple.desktop
       - install -Dm644 org.skytemple.SkyTemple.appdata.xml /app/share/metainfo/org.skytemple.SkyTemple.appdata.xml
     sources:
+      - type: file
+        url: https://files.pythonhosted.org/packages/d9/5f/2daccd14278b6b780ae6799f85998377c06019354982391245f4b58a927d/setuptools-65.3.0-py3-none-any.whl
+        sha256: 2e24e0bec025f035a2e72cdd1961119f557d78ad331bb00ff82efb2ab8da8e82
+        dest: ./links
+      - type: file
+        url: https://files.pythonhosted.org/packages/27/d6/003e593296a85fd6ed616ed962795b2f87709c3eee2bca4f6d0fe55c6d00/wheel-0.37.1-py2.py3-none-any.whl
+        sha256: 4bdcd7d840138086126cd09254dc6195fb4fc6f01c050a1d7236f2630db1d22a
+        dest: ./links
       - type: archive
-        url: https://github.com/SkyTemple/skytemple/archive/refs/tags/1.5.5.tar.gz
-        sha256: 9ac22338742c8c4dd9c123d72f70d5bde7294f9721db304cd76426b26acca481
+        url: https://github.com/SkyTemple/skytemple/archive/refs/tags/1.6.0.tar.gz
+        sha256: 3fa98bfdfcdde502b084dce7da279df14bf182b91af76466026e1f51454bc245
       - type: file
         path: run.sh

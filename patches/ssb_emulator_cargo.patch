@@ -1,0 +1,22 @@
+--- a/ssb-emulator/Cargo.lock
++++ b/ssb-emulator/Cargo.lock
+@@ -641,7 +641,6 @@
+ [[package]]
+ name = "skytemple_rust"
+ version = "1.6.0"
+-source = "git+https://github.com/SkyTemple/skytemple-rust.git?tag=1.6.0#9403594d96a7c8fa480625578038a75e9189173f"
+ dependencies = [
+  "bytes",
+  "encoding",
+
+--- a/ssb-emulator/Cargo.toml
++++ b/ssb-emulator/Cargo.toml
+@@ -12,7 +12,7 @@
+ 
+ [dependencies]
+ desmume-rs = "0.1"
+-skytemple_rust = { git = "https://github.com/SkyTemple/skytemple-rust.git", default-features = false, features = ["script_var_table"], tag = "1.6.0" }
++skytemple_rust = { path = "../skytemple-rust", default-features = false, features = ["script_var_table"] }
+ pyo3 = { version = "0.20", features = ["extension-module"] }
+ pyo3-log = "0.9"
+ log = "0.4"
