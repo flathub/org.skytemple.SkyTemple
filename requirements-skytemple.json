@@ -21,7 +21,7 @@
             "name": "python3-skytemple-files",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"graphql-core==3.3.0a3\" \"skytemple-files[spritecollab]==1.6.2\""
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"graphql-core==3.3.0a3\" \"skytemple-files[spritecollab]==1.6.3\""
             ],
             "sources": [
                 {
@@ -91,13 +91,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/dd/61/15931828aebb8ac274b6e1f461a446dfa8fb06db6d8670e586e188c10d9e/skytemple_files-1.6.2-py3-none-any.whl",
-                    "sha256": "216dcbd0118db4a63d250b23fb73b1cd4a62eb76d2aba73d81019381815811ff"
+                    "url": "https://files.pythonhosted.org/packages/ca/df/2e457fd3dcbf6176fd200502a74149b9b19c5b6502d05a7753a5388fceca/skytemple_files-1.6.3-py3-none-any.whl",
+                    "sha256": "b88023ec8f4ffc70414bf647f397f4bb60c42bfb6b9aaeee6bed26dfc3b3d9ac"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/7e/e8/892f462cedf1e764b933454e24082bdfd4bf505e29cd912424359494adf8/skytemple-rust-1.6.2.tar.gz",
-                    "sha256": "2d17a3c7fb0384830d42df4baa3a0cb970906e6f1a1ec0449f2b8fe9ca9ef892"
+                    "url": "https://files.pythonhosted.org/packages/07/fd/def140c49aba4ab16cbd5ba1b29461ffb6567faf338aa92d9d2e6f29b5bd/skytemple-rust-1.6.3.tar.gz",
+                    "sha256": "cfd56ef668fcda1c2e3ef6b9ead99abf88cdf510a83486712fe0b7198b58b0ea"
                 },
                 {
                     "type": "file",
@@ -269,8 +269,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/7e/e8/892f462cedf1e764b933454e24082bdfd4bf505e29cd912424359494adf8/skytemple-rust-1.6.2.tar.gz",
-                    "sha256": "2d17a3c7fb0384830d42df4baa3a0cb970906e6f1a1ec0449f2b8fe9ca9ef892"
+                    "url": "https://files.pythonhosted.org/packages/07/fd/def140c49aba4ab16cbd5ba1b29461ffb6567faf338aa92d9d2e6f29b5bd/skytemple-rust-1.6.3.tar.gz",
+                    "sha256": "cfd56ef668fcda1c2e3ef6b9ead99abf88cdf510a83486712fe0b7198b58b0ea"
                 },
                 {
                     "type": "file",
@@ -314,8 +314,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/dd/61/15931828aebb8ac274b6e1f461a446dfa8fb06db6d8670e586e188c10d9e/skytemple_files-1.6.2-py3-none-any.whl",
-                    "sha256": "216dcbd0118db4a63d250b23fb73b1cd4a62eb76d2aba73d81019381815811ff"
+                    "url": "https://files.pythonhosted.org/packages/ca/df/2e457fd3dcbf6176fd200502a74149b9b19c5b6502d05a7753a5388fceca/skytemple_files-1.6.3-py3-none-any.whl",
+                    "sha256": "b88023ec8f4ffc70414bf647f397f4bb60c42bfb6b9aaeee6bed26dfc3b3d9ac"
                 },
                 {
                     "type": "file",
@@ -449,8 +449,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/7e/e8/892f462cedf1e764b933454e24082bdfd4bf505e29cd912424359494adf8/skytemple-rust-1.6.2.tar.gz",
-                    "sha256": "2d17a3c7fb0384830d42df4baa3a0cb970906e6f1a1ec0449f2b8fe9ca9ef892"
+                    "url": "https://files.pythonhosted.org/packages/07/fd/def140c49aba4ab16cbd5ba1b29461ffb6567faf338aa92d9d2e6f29b5bd/skytemple-rust-1.6.3.tar.gz",
+                    "sha256": "cfd56ef668fcda1c2e3ef6b9ead99abf88cdf510a83486712fe0b7198b58b0ea"
                 },
                 {
                     "type": "file",
@@ -494,8 +494,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/dd/61/15931828aebb8ac274b6e1f461a446dfa8fb06db6d8670e586e188c10d9e/skytemple_files-1.6.2-py3-none-any.whl",
-                    "sha256": "216dcbd0118db4a63d250b23fb73b1cd4a62eb76d2aba73d81019381815811ff"
+                    "url": "https://files.pythonhosted.org/packages/ca/df/2e457fd3dcbf6176fd200502a74149b9b19c5b6502d05a7753a5388fceca/skytemple_files-1.6.3-py3-none-any.whl",
+                    "sha256": "b88023ec8f4ffc70414bf647f397f4bb60c42bfb6b9aaeee6bed26dfc3b3d9ac"
                 },
                 {
                     "type": "file",
