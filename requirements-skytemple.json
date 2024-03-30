@@ -21,9 +21,19 @@
             "name": "python3-skytemple-files",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"graphql-core==3.3.0a3\" \"skytemple-files[spritecollab]==1.6.3\""
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"graphql-core==3.3.0a4\" \"skytemple-files[spritecollab]==1.6.5\""
             ],
             "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/13/a3/a812df4e2dd5696d1f351d58b8fe16a405b234ad2886a0dab9183fb78109/pycparser-2.22-py3-none-any.whl",
+                    "sha256": "c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/68/ce/95b0bae7968c65473e1298efb042e10cafc7bafc14d9e4f154008241c91d/cffi-1.16.0.tar.gz",
+                    "sha256": "bcb3ef43e58665bbda2fb198698fcae6776483e0c4a631aa5647806c25e02cc0"
+                },
                 {
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/24/99/4772b8e00a136f3e01236de33b0efda31ee7077203ba5967fcc76da94d65/texttable-1.7.0-py2.py3-none-any.whl",
@@ -31,8 +41,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/c3/a0/5dba8ed157b0136607c7f2151db695885606968d1fae123dc3391e0cfdbf/sniffio-1.3.0-py3-none-any.whl",
-                    "sha256": "eecefdce1e5bbfb7ad2eeaabf7c1eeb404d7757c379bd1f7e5cce9d8bf425384"
+                    "url": "https://files.pythonhosted.org/packages/e9/44/75a9c9421471a6c4805dbf2356f7c181a29c1879239abab1ea2cc8f38b40/sniffio-1.3.1-py3-none-any.whl",
+                    "sha256": "2f6da418d1f1e0fddd844478f41680e794e6051915791a034ff65e5f100525a2"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/1b/8f/daf60bbc06f4a3cd1cfb0ab807057151287df6f5c78f2e0d298acc9193ac/pycares-4.4.0.tar.gz",
+                    "sha256": "f47579d508f2f56eddd16ce72045782ad3b1b3b678098699e2b6a1b30733e1c2"
                 },
                 {
                     "type": "file",
@@ -41,8 +56,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/70/2f/7e6938626dfb41c737a99e960e47d98b51ab0581af4d35b3bf3ae43af0c1/gql-3.6.0b0-py2.py3-none-any.whl",
-                    "sha256": "fa71ea94e4bc1774a5804431165e2c38bf88195122e430292fb057cfbb995f8e"
+                    "url": "https://files.pythonhosted.org/packages/2f/c2/f9e977608bdf958650638c3f1e28f85a1b075f075ebbe77db8555463787b/Brotli-1.1.0.tar.gz",
+                    "sha256": "81de08ac11bcb85841e440c13611c00b67d3bf82698314928d0b676362546724"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/1a/74/976abff30200cb0cab0bd076db074b8cdda9236ba885ebe3f4d91c7e074b/aiodns-3.1.1-py3-none-any.whl",
+                    "sha256": "a387b63da4ced6aad35b1dda2d09620ad608a1c7c0fb71efa07ebb4cd511928d"
                 },
                 {
                     "type": "file",
@@ -56,8 +76,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/4a/15/bd620f7a6eb9aa5112c4ef93e7031bcd071e0611763d8e17706ef8ba65e0/multidict-6.0.4.tar.gz",
-                    "sha256": "3666906492efb76453c0e7b97f2cf459b0682e7402c0489a95484965dbc1da49"
+                    "url": "https://files.pythonhosted.org/packages/f9/79/722ca999a3a09a63b35aac12ec27dfa8e5bb3a38b0f857f7a1a209a88836/multidict-6.0.5.tar.gz",
+                    "sha256": "f7e301075edaf50500f0b341543c41194d8df3ae5caf4702f2095f3ca73dd8da"
                 },
                 {
                     "type": "file",
@@ -81,8 +101,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/bf/cd/d6d9bb1dadf73e7af02d18225cbd2c93f8552e13130484f1c8dcfece292b/anyio-4.2.0-py3-none-any.whl",
-                    "sha256": "745843b39e829e108e518c489b31dc757de7d2131d53fac32bd8df268227bfee"
+                    "url": "https://files.pythonhosted.org/packages/14/fd/2f20c40b45e4fb4324834aea24bd4afdf1143390242c0b33774da0e2e34f/anyio-4.3.0-py3-none-any.whl",
+                    "sha256": "048e05d0f6caeed70d731f3db756d35dcc1f35747c8c403364a8332c630441b8"
                 },
                 {
                     "type": "file",
@@ -91,13 +111,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ca/df/2e457fd3dcbf6176fd200502a74149b9b19c5b6502d05a7753a5388fceca/skytemple_files-1.6.3-py3-none-any.whl",
-                    "sha256": "b88023ec8f4ffc70414bf647f397f4bb60c42bfb6b9aaeee6bed26dfc3b3d9ac"
+                    "url": "https://files.pythonhosted.org/packages/18/93/1f005bbe044471a0444a82cdd7356f5120b9cf94fe2c50c0cdbf28f1258b/aiohttp-3.9.3.tar.gz",
+                    "sha256": "90842933e5d1ff760fae6caca4b2b3edba53ba8f4b71e95dacf2818a2aca06f7"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/07/fd/def140c49aba4ab16cbd5ba1b29461ffb6567faf338aa92d9d2e6f29b5bd/skytemple-rust-1.6.3.tar.gz",
-                    "sha256": "cfd56ef668fcda1c2e3ef6b9ead99abf88cdf510a83486712fe0b7198b58b0ea"
+                    "url": "https://files.pythonhosted.org/packages/19/fd/725d00eaf51bb1ce9bcfef138f0db3c07d13af13e21b69266b40f1831cc9/skytemple-rust-1.6.5.tar.gz",
+                    "sha256": "6dffae9ab6f9108a020f6921795a5ff48c2c5b849fda147b5ce133b1c62d2c0f"
                 },
                 {
                     "type": "file",
@@ -126,13 +146,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/95/74/5ec674eb611ba6d70a8622a58ffe9c087afee079f8688ef2b836adca8616/graphql_core-3.3.0a3-py3-none-any.whl",
-                    "sha256": "b441346e61b2d7465a6f4001334ba1ddb123498a7e9dfe76cd323db8159aa707"
+                    "url": "https://files.pythonhosted.org/packages/b7/eb/7efab3218a4dc7cbb79977270877669f285232c076e4b3c17f645a2f414b/graphql_core-3.3.0a4-py3-none-any.whl",
+                    "sha256": "3a6189726a5a8564d3dcaa13847ebebde6f98fb3c4df792b40380415a43cc663"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/54/07/9467d3f8dae29b14f423b414d9e67512a76743c5bb7686fb05fe10c9cc3e/aiohttp-3.9.1.tar.gz",
-                    "sha256": "8fc49a87ac269d4529da45871e2ffb6874e87779c3d0e2ccd813c0899221239d"
+                    "url": "https://files.pythonhosted.org/packages/ef/27/a922bc453df59d1e8da0ad4bdfe59a06cbad3d969374355032aa7e470b8b/gql-3.6.0b1-py2.py3-none-any.whl",
+                    "sha256": "c1acb7736fda247e21fe99325041eddef16a97e3618fe2d90e1c2ed7fe994d28"
                 },
                 {
                     "type": "file",
@@ -163,6 +183,11 @@
                     "type": "file",
                     "url": "https://files.pythonhosted.org/packages/4b/d9/d0cf66484b7e28a9c42db7e3929caed46f8b80478cd8c9bd38b7be059150/setuptools-69.0.2.tar.gz",
                     "sha256": "735896e78a4742605974de002ac60562d286fa8051a7e2299445e8e8fbb01aa6"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/cf/35/ea56774a7c92e83308e70d85dfd11435bee8bf59afd6fe184a46b2682ee1/skytemple_files-1.6.5-py3-none-any.whl",
+                    "sha256": "2fbf88d88a06027a4e54b59a425348473fa53136dff83e720663fc6422b28983"
                 },
                 {
                     "type": "file",
@@ -269,8 +294,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/07/fd/def140c49aba4ab16cbd5ba1b29461ffb6567faf338aa92d9d2e6f29b5bd/skytemple-rust-1.6.3.tar.gz",
-                    "sha256": "cfd56ef668fcda1c2e3ef6b9ead99abf88cdf510a83486712fe0b7198b58b0ea"
+                    "url": "https://files.pythonhosted.org/packages/19/fd/725d00eaf51bb1ce9bcfef138f0db3c07d13af13e21b69266b40f1831cc9/skytemple-rust-1.6.5.tar.gz",
+                    "sha256": "6dffae9ab6f9108a020f6921795a5ff48c2c5b849fda147b5ce133b1c62d2c0f"
                 },
                 {
                     "type": "file",
@@ -314,8 +339,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ca/df/2e457fd3dcbf6176fd200502a74149b9b19c5b6502d05a7753a5388fceca/skytemple_files-1.6.3-py3-none-any.whl",
-                    "sha256": "b88023ec8f4ffc70414bf647f397f4bb60c42bfb6b9aaeee6bed26dfc3b3d9ac"
+                    "url": "https://files.pythonhosted.org/packages/cf/35/ea56774a7c92e83308e70d85dfd11435bee8bf59afd6fe184a46b2682ee1/skytemple_files-1.6.5-py3-none-any.whl",
+                    "sha256": "2fbf88d88a06027a4e54b59a425348473fa53136dff83e720663fc6422b28983"
                 },
                 {
                     "type": "file",
@@ -439,7 +464,7 @@
             "name": "python3-skytemple-ssb-debugger",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"skytemple-ssb-debugger==1.6.2\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"skytemple-ssb-debugger==1.6.4\" --no-build-isolation"
             ],
             "sources": [
                 {
@@ -449,8 +474,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/07/fd/def140c49aba4ab16cbd5ba1b29461ffb6567faf338aa92d9d2e6f29b5bd/skytemple-rust-1.6.3.tar.gz",
-                    "sha256": "cfd56ef668fcda1c2e3ef6b9ead99abf88cdf510a83486712fe0b7198b58b0ea"
+                    "url": "https://files.pythonhosted.org/packages/19/fd/725d00eaf51bb1ce9bcfef138f0db3c07d13af13e21b69266b40f1831cc9/skytemple-rust-1.6.5.tar.gz",
+                    "sha256": "6dffae9ab6f9108a020f6921795a5ff48c2c5b849fda147b5ce133b1c62d2c0f"
                 },
                 {
                     "type": "file",
@@ -474,8 +499,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/84/3f/5fb2c57364138f5082d6c0075345cfd00a1221fc342ede3751000114ebc7/skytemple-ssb-emulator-1.6.1.post1.tar.gz",
-                    "sha256": "14442740f21ab61b6b3f4dc39dccf9eb42b4961296e3e1c8fceca8eeab04a45c"
+                    "url": "https://files.pythonhosted.org/packages/c4/6e/550cbd0f855b0f0304ed81f797573946b8858d5b0c86b4e9b4560e35af5a/skytemple-ssb-emulator-1.6.4.tar.gz",
+                    "sha256": "a8645f5fb070af5f4a26721d870b925416735f1309c8483206ecbdd5a2e1123e"
                 },
                 {
                     "type": "file",
@@ -494,8 +519,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ca/df/2e457fd3dcbf6176fd200502a74149b9b19c5b6502d05a7753a5388fceca/skytemple_files-1.6.3-py3-none-any.whl",
-                    "sha256": "b88023ec8f4ffc70414bf647f397f4bb60c42bfb6b9aaeee6bed26dfc3b3d9ac"
+                    "url": "https://files.pythonhosted.org/packages/cf/35/ea56774a7c92e83308e70d85dfd11435bee8bf59afd6fe184a46b2682ee1/skytemple_files-1.6.5-py3-none-any.whl",
+                    "sha256": "2fbf88d88a06027a4e54b59a425348473fa53136dff83e720663fc6422b28983"
                 },
                 {
                     "type": "file",
@@ -509,8 +534,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ac/4a/f24ddf1d20cc4b56affc7921e29928559a06c922eb60077448392792b914/PyGObject-3.46.0.tar.gz",
-                    "sha256": "481437b05af0a66b7c366ea052710eb3aacbb979d22d30b797f7ec29347ab1e6"
+                    "url": "https://files.pythonhosted.org/packages/a9/73/ff037ab99c40522ed53c759baa0e3969d03933d3650f02e50ee0cb639666/pygobject-3.48.1.tar.gz",
+                    "sha256": "2c4cd7c805ee9e727904172423a7519338017fd7e122b62218ac211627436875"
                 },
                 {
                     "type": "file",
@@ -519,8 +544,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ab/d3/48c01d1944e0ee49fdc005bf518a68b0582d3bd201e5401664890b62a647/nest_asyncio-1.5.8-py3-none-any.whl",
-                    "sha256": "accda7a339a70599cb08f9dd09a67e0c2ef8d8d6f4c07f96ab203f2ae254e48d"
+                    "url": "https://files.pythonhosted.org/packages/a0/c4/c2971a3ba4c6103a3d10c4b0f24f461ddc027f0f09763220cf35ca1401b3/nest_asyncio-1.6.0-py3-none-any.whl",
+                    "sha256": "87af6efd6b5e897c81050477ef65c62e2b2f35d51703cae01aff2905b1852e1c"
                 },
                 {
                     "type": "file",
@@ -539,8 +564,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/d2/ed/314ac93762ba805958b74b051fbaebf7c20041caa5296cff5eb2776e8ae0/skytemple_ssb_debugger-1.6.2-py3-none-any.whl",
-                    "sha256": "d90222d7f1d2d907b2f7940b0c02fc17801f83aa828bf73b77d8b8df6a850d8d"
+                    "url": "https://files.pythonhosted.org/packages/af/3f/5d67e99376621a93946ef2f1ff391881ef507eb2c2e23efb71be297ab9b5/skytemple_ssb_debugger-1.6.4-py3-none-any.whl",
+                    "sha256": "4223a587b6ff5a4b5724d0ef9a4d67c41128da80ab57c8aa4a6d55775dfe6b30"
                 }
             ]
         },
@@ -576,13 +601,23 @@
             "name": "python3-pygal",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pygal==3.0.1\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"pygal==3.0.4\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/e6/b9/57eeee7baa4efe13719c67d762ee86deb53f5a8d1461914f515c5a6a9a5d/pygal-3.0.1-py2.py3-none-any.whl",
-                    "sha256": "5a3ebc203555d1bd72361552822f736d29592fd7de6df870430374ba31798538"
+                    "url": "https://files.pythonhosted.org/packages/c2/0a/ba9d0ee9536d3ef73a3448e931776e658b36f128d344e175bc32b092a8bf/zipp-3.18.1-py3-none-any.whl",
+                    "sha256": "206f5a15f2af3dbaee80769fb7dc6f249695e940acca08dfb2a4769fe61e538b"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/2d/0a/679461c511447ffaf176567d5c496d1de27cbe34a87df6677d7171b2fbd4/importlib_metadata-7.1.0-py3-none-any.whl",
+                    "sha256": "30962b96c0c223483ed6cc7280e7f0199feb01a0e40cfae4d4450fc6fab1f570"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/29/83/94e10cdc24489caef1ffcf9c3c2836fc35eff0f1c1d60d609d55d449820c/pygal-3.0.4-py2.py3-none-any.whl",
+                    "sha256": "e931caf08b4be0e6ec119a4c0e20dbed2d77829c641b7dea0ed21fe6ec81f2ea"
                 }
             ]
         },
@@ -595,8 +630,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/62/d5/5f610ebe421e85889f2e55e33b7f9a6795bd982198517d912eb1c76e1a53/pycparser-2.21-py2.py3-none-any.whl",
-                    "sha256": "8ee45429555515e1f6b185e78100aea234072576aa43ab53aefcae078162fca9"
+                    "url": "https://files.pythonhosted.org/packages/13/a3/a812df4e2dd5696d1f351d58b8fe16a405b234ad2886a0dab9183fb78109/pycparser-2.22-py3-none-any.whl",
+                    "sha256": "c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc"
                 },
                 {
                     "type": "file",
@@ -649,8 +684,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ac/4a/f24ddf1d20cc4b56affc7921e29928559a06c922eb60077448392792b914/PyGObject-3.46.0.tar.gz",
-                    "sha256": "481437b05af0a66b7c366ea052710eb3aacbb979d22d30b797f7ec29347ab1e6"
+                    "url": "https://files.pythonhosted.org/packages/a9/73/ff037ab99c40522ed53c759baa0e3969d03933d3650f02e50ee0cb639666/pygobject-3.48.1.tar.gz",
+                    "sha256": "2c4cd7c805ee9e727904172423a7519338017fd7e122b62218ac211627436875"
                 },
                 {
                     "type": "file",
@@ -663,13 +698,13 @@
             "name": "python3-psutil",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"psutil==5.9.5\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"psutil==5.9.8\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/d6/0f/96b7309212a926c1448366e9ce69b081ea79d63265bde33f11cc9cfc2c07/psutil-5.9.5.tar.gz",
-                    "sha256": "5410638e4df39c54d957fc51ce03048acd8e6d60abc0f5107af51e5fb566eb3c"
+                    "url": "https://files.pythonhosted.org/packages/90/c7/6dc0a455d111f68ee43f27793971cf03fe29b6ef972042549db29eec39a2/psutil-5.9.8.tar.gz",
+                    "sha256": "6be126e3225486dff286a8fb9a06246a5253f4c7c53b475ea5f5ac934e64194c"
                 }
             ]
         },
@@ -677,23 +712,23 @@
             "name": "python3-sentry-sdk",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"sentry-sdk==1.35.0\" --no-build-isolation"
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"sentry-sdk==1.44.0\" --no-build-isolation"
             ],
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/64/62/428ef076be88fa93716b576e4a01f919d25968913e817077a386fcbe4f42/certifi-2023.11.17-py3-none-any.whl",
-                    "sha256": "e036ab49d5b79556f99cfc2d9320b34cfbe5be05c5871b51de9329f0603b0474"
+                    "url": "https://files.pythonhosted.org/packages/ba/06/a07f096c664aeb9f01624f858c3add0a4e913d6c96257acb4fce61e7de14/certifi-2024.2.2-py3-none-any.whl",
+                    "sha256": "dc383c07b76109f368f6106eee2b593b04a011ea4d55f652c6ca24a754d1cdd1"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/96/94/c31f58c7a7f470d5665935262ebd7455c7e4c7782eb525658d3dbf4b9403/urllib3-2.1.0-py3-none-any.whl",
-                    "sha256": "55901e917a5896a349ff771be919f8bd99aff50b79fe58fec595eb37bbc56bb3"
+                    "url": "https://files.pythonhosted.org/packages/a2/73/a68704750a7679d0b6d3ad7aa8d4da8e14e151ae82e6fee774e6e0d05ec8/urllib3-2.2.1-py3-none-any.whl",
+                    "sha256": "450b20ec296a467077128bff42b73080516e71b56ff59a60a02bef2232c4fa9d"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/3a/f3/2790af9e769e62bef5d528ad66dbf0a1415d8177861056b0ae0b37cd6eed/sentry_sdk-1.35.0-py2.py3-none-any.whl",
-                    "sha256": "a7865952701e46d38b41315c16c075367675c48d049b90a4cc2e41991ebc7efa"
+                    "url": "https://files.pythonhosted.org/packages/77/91/bdb2283b2ee15adb5e58c7e6c7020c5b8ebe52d32aef94176ce2a7c2e706/sentry_sdk-1.44.0-py2.py3-none-any.whl",
+                    "sha256": "eb65289da013ca92fad2694851ad2f086aa3825e808dc285bd7dcaf63602bb18"
                 }
             ]
         },
@@ -706,8 +741,8 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/62/d5/5f610ebe421e85889f2e55e33b7f9a6795bd982198517d912eb1c76e1a53/pycparser-2.21-py2.py3-none-any.whl",
-                    "sha256": "8ee45429555515e1f6b185e78100aea234072576aa43ab53aefcae078162fca9"
+                    "url": "https://files.pythonhosted.org/packages/13/a3/a812df4e2dd5696d1f351d58b8fe16a405b234ad2886a0dab9183fb78109/pycparser-2.22-py3-none-any.whl",
+                    "sha256": "c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc"
                 },
                 {
                     "type": "file",
@@ -730,8 +765,27 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/ec/1a/610693ac4ee14fcdf2d9bf3c493370e4f2ef7ae2e19217d7a237ff42367d/packaging-23.2-py3-none-any.whl",
-                    "sha256": "8c491190033a9af7e1d931d0b5dacc2ef47509b34dd0de67ed209b5203fc88c7"
+                    "url": "https://files.pythonhosted.org/packages/49/df/1fceb2f8900f8639e278b056416d49134fb8d84c5942ffaa01ad34782422/packaging-24.0-py3-none-any.whl",
+                    "sha256": "2ddfb553fdf02fb784c234c7ba6ccc288296ceabec964ad2eae3777778130bc5"
+                }
+            ]
+        },
+        {
+            "name": "python3-importlib_metadata",
+            "buildsystem": "simple",
+            "build-commands": [
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"importlib_metadata>=4.6\" --no-build-isolation"
+            ],
+            "sources": [
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/c2/0a/ba9d0ee9536d3ef73a3448e931776e658b36f128d344e175bc32b092a8bf/zipp-3.18.1-py3-none-any.whl",
+                    "sha256": "206f5a15f2af3dbaee80769fb7dc6f249695e940acca08dfb2a4769fe61e538b"
+                },
+                {
+                    "type": "file",
+                    "url": "https://files.pythonhosted.org/packages/2d/0a/679461c511447ffaf176567d5c496d1de27cbe34a87df6677d7171b2fbd4/importlib_metadata-7.1.0-py3-none-any.whl",
+                    "sha256": "30962b96c0c223483ed6cc7280e7f0199feb01a0e40cfae4d4450fc6fab1f570"
                 }
             ]
         },
