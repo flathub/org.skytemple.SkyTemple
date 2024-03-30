@@ -172,4 +172,7 @@ modules:
         url: https://github.com/SkyTemple/skytemple/archive/refs/tags/1.6.5.tar.gz
         sha256: 1789accef0394555364adaf1d66e96560d2b6e24decbb6818c19332fe60bef04
       - type: file
+        url: https://raw.githubusercontent.com/SkyTemple/skytemple/master/org.skytemple.SkyTemple.appdata.xml
+        sha256: e9ab44ca870f4378a1a84c698f281009455a65eeee5e762798a2905a58cf783a
+      - type: file
         path: run.sh
