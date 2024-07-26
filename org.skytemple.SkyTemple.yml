@@ -1,6 +1,6 @@
 app-id: org.skytemple.SkyTemple
 runtime: org.gnome.Platform
-runtime-version: '45'
+runtime-version: '46'
 sdk: org.gnome.Sdk
 command: run.sh
 finish-args:
@@ -12,15 +12,17 @@ finish-args:
   - "--filesystem=host"
   - "--filesystem=xdg-run/app/com.discordapp.Discord:create"
   - "--filesystem=xdg-run/discord-ipc-0:create"
+  - "--device=all" # input
 sdk-extensions:
   - org.freedesktop.Sdk.Extension.rust-stable
-cleanup:  # todo
+cleanup:
   - /bin/pcap-config
   - /include
   - /lib/libpcap.a
   - /lib/pkgconfig
   - /share/man
 modules:
+
   - name: armips
     buildsystem: cmake-ninja
     no-make-install: true
@@ -34,44 +36,37 @@ modules:
         sha256: c94e29dfda3bdf853590d825562b9c73a3d8e8e995555e021c6b2a6451572681
       - type: patch
         path: patches/armips.patch
-  # This needs to be done seperately due to some patches and the Rust compiler and Cargo packages required.
-  # Also this needs build isolation, unlike the rest.
+
+  # This needs to be done separately due to some Cargo packages required.
   - name: python3-skytemple-rust
     buildsystem: simple
     build-commands:
-      - . /usr/lib/sdk/rust-stable/enable.sh && pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "./skytemple-rust"
+      - . /usr/lib/sdk/rust-stable/enable.sh && CARGO_NET_OFFLINE=1 pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "./skytemple-rust"
     build-options:
       env:
         CARGO_HOME: /run/build/python3-skytemple-rust/cargo
     sources:
-      - cargo-sources.json
-      - type: file
-        url: https://files.pythonhosted.org/packages/27/d6/003e593296a85fd6ed616ed962795b2f87709c3eee2bca4f6d0fe55c6d00/wheel-0.37.1-py2.py3-none-any.whl
-        sha256: 4bdcd7d840138086126cd09254dc6195fb4fc6f01c050a1d7236f2630db1d22a
+      - cargo-sources-skytemple-rust.json
+      - sha256: 032d42ee9fb536e33087fb66cac5f840eb9391ed05637b3f2a76a7c8fb477936
+        type: file
+        url: https://files.pythonhosted.org/packages/32/c0/5b8013b5a812701c72e3b1e2b378edaa6514d06bee6704a5ab0d7fa52931/setuptools-71.1.0.tar.gz
+      - sha256: 465ef92c69fa5c5da2d1cf8ac40559a8c940886afcef87dcf14b9470862f1d85
+        type: file
+        url: https://files.pythonhosted.org/packages/b8/d6/ac9cd92ea2ad502ff7c1ab683806a9deb34711a1e2bd8a59814e8fc27e69/wheel-0.43.0.tar.gz
+      - sha256: 409caf49dcf7ad9bd510b4bf4011fbad504e745fae98f57fe1c06f3a97719638
+        type: file
+        url: https://files.pythonhosted.org/packages/f7/7f/8b1c33598b03ad612b8ced223f9ca54076b789fabf5a66ce37cc096d9cf7/setuptools_rust-1.9.0-py3-none-any.whl
+      - sha256: de78a3b8e0feda74cabc54aab2da702113e33ac9d9eb9d2389bcf1f58b7d9177
+        type: file
+        url: https://files.pythonhosted.org/packages/6a/23/8146aad7d88f4fcb3a6218f41a60f6c2d4e3a72de72da1825dc7c8f7877c/semantic_version-2.10.0-py2.py3-none-any.whl
+      - sha256: 7aada352fb0c7f5538c4fafeddf314d3a6a92ee8e2b1de70482329e42de70301
+        type: file
+        url: https://files.pythonhosted.org/packages/38/45/618e84e49a6c51e5dd15565ec2fcd82ab273434f236b8f108f065ded517a/flit_core-3.9.0-py3-none-any.whl
+      - {"type": "git", "url": "https://github.com/SkyTemple/skytemple-rust.git", "tag": "1.6.5", "dest": "skytemple-rust"}
       - type: file
         url: https://files.pythonhosted.org/packages/2e/49/565350c6fab3f5a3e2c46633290117060e70e2501544cdf3bde1d1d5d0fe/range_typed_integers-1.0.1-py3-none-any.whl
         sha256: 35d39a41642503c5c5117e26798713f081b1beece1b2afd8f1ba70c8d90f63c5
-      - type: file
-        url: https://files.pythonhosted.org/packages/6a/23/8146aad7d88f4fcb3a6218f41a60f6c2d4e3a72de72da1825dc7c8f7877c/semantic_version-2.10.0-py2.py3-none-any.whl
-        sha256: de78a3b8e0feda74cabc54aab2da702113e33ac9d9eb9d2389bcf1f58b7d9177
-      - type: file
-        url: https://files.pythonhosted.org/packages/ed/d6/2afc375a8d55b8be879d6b4986d4f69f01115e795e36827fd3a40166028b/typing_extensions-4.3.0-py3-none-any.whl
-        sha256: 25642c956049920a5aa49edcdd6ab1e06d7e5d467fc00e0506c44ac86fbfca02
-      - type: file
-        url: https://files.pythonhosted.org/packages/d9/5f/2daccd14278b6b780ae6799f85998377c06019354982391245f4b58a927d/setuptools-65.3.0-py3-none-any.whl
-        sha256: 2e24e0bec025f035a2e72cdd1961119f557d78ad331bb00ff82efb2ab8da8e82
-      - type: file
-        url: https://files.pythonhosted.org/packages/97/75/10a9ebee3fd790d20926a90a2547f0bf78f371b2f13aa822c759680ca7b9/tomli-2.0.1-py3-none-any.whl
-        sha256: 939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc
-      - type: git
-        url: https://github.com/SkyTemple/skytemple-rust.git
-        tag: "1.6.5"
-        dest: skytemple-rust
-      - type: file
-        url: https://files.pythonhosted.org/packages/5b/be/8d88f5982d61fefa2cbc633b167d2553875169eee136b584089667c37e93/setuptools_rust-1.7.0-py3-none-any.whl
-        sha256: 071099885949132a2180d16abf907b60837e74b4085047ba7e9c0f5b365310c1
-      - type: patch
-        path: patches/skytemple_rust_setup_py.patch
+
   # This is required by desmume-rs.
   - name: pcap
     buildsystem: autotools
@@ -79,69 +74,126 @@ modules:
       - "--disable-shared"
       - "--disable-dbus"
     sources:
-    - type: archive
-      url: https://www.tcpdump.org/release/libpcap-1.10.1.tar.gz
-      sha512: 56c314f19c2b857742bf8abcb1e78066986aaa95cec339b75a3c8b70a9fa2b5167da98708352f9ec97a1cea2700cfb4e040bda108d58ac46cec9b7deab88d171
-  # This needs to be done seperately due to some patches and the Rust compiler and Cargo packages required.
-  # Also this needs build isolation, unlike the rest.
+      - type: archive
+        url: https://www.tcpdump.org/release/libpcap-1.10.1.tar.gz
+        sha512: 56c314f19c2b857742bf8abcb1e78066986aaa95cec339b75a3c8b70a9fa2b5167da98708352f9ec97a1cea2700cfb4e040bda108d58ac46cec9b7deab88d171
+
+  # This needs to be done separately due to some Cargo packages required.
   - name: python3-skytemple-ssb-emulator
     buildsystem: simple
     build-commands:
-      - . /usr/lib/sdk/rust-stable/enable.sh && pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "./ssb-emulator"
+      - . /usr/lib/sdk/rust-stable/enable.sh && CARGO_NET_OFFLINE=1 pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "./ssb-emulator"
     build-options:
       env:
         CARGO_HOME: /run/build/python3-skytemple-ssb-emulator/cargo
     sources:
       - cargo-sources-ssb-emulator.json
-      - type: file
-        url: https://files.pythonhosted.org/packages/27/d6/003e593296a85fd6ed616ed962795b2f87709c3eee2bca4f6d0fe55c6d00/wheel-0.37.1-py2.py3-none-any.whl
-        sha256: 4bdcd7d840138086126cd09254dc6195fb4fc6f01c050a1d7236f2630db1d22a
+      - sha256: 032d42ee9fb536e33087fb66cac5f840eb9391ed05637b3f2a76a7c8fb477936
+        type: file
+        url: https://files.pythonhosted.org/packages/32/c0/5b8013b5a812701c72e3b1e2b378edaa6514d06bee6704a5ab0d7fa52931/setuptools-71.1.0.tar.gz
+      - sha256: 465ef92c69fa5c5da2d1cf8ac40559a8c940886afcef87dcf14b9470862f1d85
+        type: file
+        url: https://files.pythonhosted.org/packages/b8/d6/ac9cd92ea2ad502ff7c1ab683806a9deb34711a1e2bd8a59814e8fc27e69/wheel-0.43.0.tar.gz
+      - sha256: 409caf49dcf7ad9bd510b4bf4011fbad504e745fae98f57fe1c06f3a97719638
+        type: file
+        url: https://files.pythonhosted.org/packages/f7/7f/8b1c33598b03ad612b8ced223f9ca54076b789fabf5a66ce37cc096d9cf7/setuptools_rust-1.9.0-py3-none-any.whl
+      - sha256: de78a3b8e0feda74cabc54aab2da702113e33ac9d9eb9d2389bcf1f58b7d9177
+        type: file
+        url: https://files.pythonhosted.org/packages/6a/23/8146aad7d88f4fcb3a6218f41a60f6c2d4e3a72de72da1825dc7c8f7877c/semantic_version-2.10.0-py2.py3-none-any.whl
+      - sha256: 7aada352fb0c7f5538c4fafeddf314d3a6a92ee8e2b1de70482329e42de70301
+        type: file
+        url: https://files.pythonhosted.org/packages/38/45/618e84e49a6c51e5dd15565ec2fcd82ab273434f236b8f108f065ded517a/flit_core-3.9.0-py3-none-any.whl
+      - {"type": "git", "url": "https://github.com/SkyTemple/skytemple-ssb-emulator.git", "tag": "1.8.0", "dest": "ssb-emulator"}
       - type: file
         url: https://files.pythonhosted.org/packages/2e/49/565350c6fab3f5a3e2c46633290117060e70e2501544cdf3bde1d1d5d0fe/range_typed_integers-1.0.1-py3-none-any.whl
         sha256: 35d39a41642503c5c5117e26798713f081b1beece1b2afd8f1ba70c8d90f63c5
       - type: file
-        url: https://files.pythonhosted.org/packages/6a/23/8146aad7d88f4fcb3a6218f41a60f6c2d4e3a72de72da1825dc7c8f7877c/semantic_version-2.10.0-py2.py3-none-any.whl
-        sha256: de78a3b8e0feda74cabc54aab2da702113e33ac9d9eb9d2389bcf1f58b7d9177
+        url: https://files.pythonhosted.org/packages/c4/cd/47e45d3abada2e1edb9e2ca9334be186d2e7f97a01b09b5b82799c4d7bd3/meson-1.5.0-py3-none-any.whl
+        sha256: 52b34f4903b882df52ad0d533146d4b992c018ea77399f825579737672ae7b20
+
+  # This needs to be done separately due to some patches and just overall complexity.
+  - name: python3-explorerscript
+    buildsystem: simple
+    build-commands:
+      - pip3 install --verbose --exists-action=i --no-index --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "./explorerscript"
+    sources:
+      - sha256: 026ed72c8ed3fcce5bf8950572258698927fd1dbda10a5e981cdf0ac37f4f002
+        type: file
+        url: https://files.pythonhosted.org/packages/51/65/50db4dda066951078f0a96cf12f4b9ada6e4b811516bf0262c0f4f7064d4/packaging-24.1.tar.gz
+      - sha256: 032d42ee9fb536e33087fb66cac5f840eb9391ed05637b3f2a76a7c8fb477936
+        type: file
+        url: https://files.pythonhosted.org/packages/32/c0/5b8013b5a812701c72e3b1e2b378edaa6514d06bee6704a5ab0d7fa52931/setuptools-71.1.0.tar.gz
+      - sha256: 465ef92c69fa5c5da2d1cf8ac40559a8c940886afcef87dcf14b9470862f1d85
+        type: file
+        url: https://files.pythonhosted.org/packages/b8/d6/ac9cd92ea2ad502ff7c1ab683806a9deb34711a1e2bd8a59814e8fc27e69/wheel-0.43.0.tar.gz
+      - sha256: c8ff2582f94d2d9e650a9869015704e77c35baf691b6228ce87fd062a21063b1
+        type: file
+        url: https://files.pythonhosted.org/packages/06/c7/46b4becf16d6164f46f26cfd3c8b192a994b2a90bd731df1974b788fb391/scikit_build_core-0.9.8.tar.gz
+      - sha256: a482d51503a1ab33b1c67a6c3813a26953dbdc71c31dacaef9a838c4e29f5712
+        type: file
+        url: https://files.pythonhosted.org/packages/ca/bc/f35b8446f4531a7cb215605d100cd88b7ac6f44ab3fc94870c120ab3adbf/pathspec-0.12.1.tar.gz
+      - sha256: 65be498b1cac516161add1508e65375674916bebf2570d057dc9c3c7bcbbc7b0
+        type: file
+        url: https://files.pythonhosted.org/packages/98/50/a8dc5a7b9fbb9a90dfc9003b3eecc046b9f64dc9b8d464119064c0344a83/pybind11-2.13.1.tar.gz
+      - sha256: 7064631a512610b52250a4d3ff1bd81551d6d1431c4eb7b72e734df6c74f4262
+        type: file
+        url: https://files.pythonhosted.org/packages/a3/51/8a4a67a8174ce59cf49e816e38e9502900aea9b4af672d0127df8e10d3b0/hatchling-1.25.0.tar.gz
+      - sha256: 093810748fe01db0d451fabcf2c1ac2688caefd232d4ede967090b1c1b07d9f7
+        type: file
+        url: https://files.pythonhosted.org/packages/f5/c9/54bb4fa27b4e4a014ef3bb17710cdf692b3aa2cbc7953da885f1bf7e06ea/hatch_vcs-0.4.0.tar.gz
+      - sha256: a482d51503a1ab33b1c67a6c3813a26953dbdc71c31dacaef9a838c4e29f5712
+        type: file
+        url: https://files.pythonhosted.org/packages/ca/bc/f35b8446f4531a7cb215605d100cd88b7ac6f44ab3fc94870c120ab3adbf/pathspec-0.12.1.tar.gz
+      - sha256: 2cffa88e94fdc978c4c574f15f9e59b7f4201d439195c3715ca9e2486f1d0cf1
+        type: file
+        url: https://files.pythonhosted.org/packages/96/2d/02d4312c973c6050a18b314a5ad0b3210edb65a906f868e31c111dede4a6/pluggy-1.5.0.tar.gz
+      - sha256: 8328f2ac2ce3fd773cbb37c765a0ed7a83f89dc564c7d452f039b69249d0ac35
+        type: file
+        url: https://files.pythonhosted.org/packages/78/c9/83f915c3f6f94f4c862c7470284fd714f312cce8e3cf98361312bc02493d/trove_classifiers-2024.7.2.tar.gz
+      - sha256: e05493a3b17517ef1748fbe610da11f10485faa7c416b9d33fd4a52d74894f8b
+        type: file
+        url: https://files.pythonhosted.org/packages/b5/00/96cbed7c019c49ee04b8a08357a981983db7698ae6de402e57097cefc9ad/calver-2022.6.26.tar.gz
+      - sha256: 42dea1b65771cba93b7a515d65a65d8246e560768a66b9106a592c8e7f26c8a7
+        type: file
+        url: https://files.pythonhosted.org/packages/4f/a4/00a9ac1b555294710d4a68d2ce8dfdf39d72aa4d769a7395d05218d88a42/setuptools_scm-8.1.0.tar.gz
+      - sha256: 7aada352fb0c7f5538c4fafeddf314d3a6a92ee8e2b1de70482329e42de70301
+        type: file
+        url: https://files.pythonhosted.org/packages/38/45/618e84e49a6c51e5dd15565ec2fcd82ab273434f236b8f108f065ded517a/flit_core-3.9.0-py3-none-any.whl
+      - {"type": "git", "url": "https://github.com/SkyTemple/explorerscript.git", "tag": "0.2.1.post2", "dest": "explorerscript"}
       - type: file
-        url: https://files.pythonhosted.org/packages/ed/d6/2afc375a8d55b8be879d6b4986d4f69f01115e795e36827fd3a40166028b/typing_extensions-4.3.0-py3-none-any.whl
-        sha256: 25642c956049920a5aa49edcdd6ab1e06d7e5d467fc00e0506c44ac86fbfca02
+        url: https://files.pythonhosted.org/packages/5f/a0/1f70c34a96dcb0acf428319e83655e92ab2955d73a33f711852a5fb79681/igraph-0.11.6.tar.gz
+        sha256: 837f233256c3319f2a35a6a80d94eafe47b43791ef4c6f9e9871061341ac8e28
       - type: file
-        url: https://files.pythonhosted.org/packages/d9/5f/2daccd14278b6b780ae6799f85998377c06019354982391245f4b58a927d/setuptools-65.3.0-py3-none-any.whl
-        sha256: 2e24e0bec025f035a2e72cdd1961119f557d78ad331bb00ff82efb2ab8da8e82
-      - type: file
-        url: https://files.pythonhosted.org/packages/ce/55/52776f722af3db59e1f15b15934d736c3dca31b4964a78fe8fdddf06ec57/meson-1.1.1-py3-none-any.whl
-        sha256: 1c5a46660dfbe5f45ef7588d78429d04ebdb6f84b96b4b015033572d2facbbe5
-      - type: git
-        url: https://github.com/SkyTemple/skytemple-ssb-emulator.git
-        tag: "1.6.4"
-        dest: ssb-emulator
-      - type: file
-        url: https://files.pythonhosted.org/packages/5b/76/6ebf4728d287527514b29bc92c14ec59f666f43b0af650df6c100614c3dc/setuptools_rust-1.5.1-py3-none-any.whl
-        sha256: 306b236ff3aa5229180e58292610d0c2c51bb488191122d2fc559ae4caeb7d5e
+        url: https://files.pythonhosted.org/packages/24/99/4772b8e00a136f3e01236de33b0efda31ee7077203ba5967fcc76da94d65/texttable-1.7.0-py2.py3-none-any.whl
+        sha256: 72227d592c82b3d7f672731ae73e4d1f88cd8e2ef5b075a7a7f01a23a3743917
       - type: patch
-        path: patches/ssb_emulator_setup_py.patch
-      - type: patch
-        path: patches/ssb_emulator_cargo.patch
-      - type: git
-        url: https://github.com/SkyTemple/skytemple-rust.git
-        tag: "1.6.4"
-        dest: skytemple-rust
+        path: patches/explorerscript_antlr_offline.patch
+
   - requirements-skytemple.json
+
   # Somehow not recognized by the builder tools
   - name: python3-wheel
     buildsystem: simple
     build-commands:
-      - pip3 install --verbose --exists-action=i --no-index --ignore-installed --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "wheel==0.41.2 "
+      - pip3 install --verbose --exists-action=i --no-index --ignore-installed --find-links="file://${PWD}" --prefix=${FLATPAK_DEST} "wheel==0.43.0 "
     sources:
-      - type: file
-        url: https://files.pythonhosted.org/packages/b8/8b/31273bf66016be6ad22bb7345c37ff350276cfd46e389a0c2ac5da9d9073/wheel-0.41.2-py3-none-any.whl
-        sha256: 75909db2664838d015e3d9139004ee16711748a52c8f336b52882266540215d8
+      - sha256: 032d42ee9fb536e33087fb66cac5f840eb9391ed05637b3f2a76a7c8fb477936
+        type: file
+        url: https://files.pythonhosted.org/packages/32/c0/5b8013b5a812701c72e3b1e2b378edaa6514d06bee6704a5ab0d7fa52931/setuptools-71.1.0.tar.gz
+      - sha256: 465ef92c69fa5c5da2d1cf8ac40559a8c940886afcef87dcf14b9470862f1d85
+        type: file
+        url: https://files.pythonhosted.org/packages/b8/d6/ac9cd92ea2ad502ff7c1ab683806a9deb34711a1e2bd8a59814e8fc27e69/wheel-0.43.0.tar.gz
+      - sha256: 7aada352fb0c7f5538c4fafeddf314d3a6a92ee8e2b1de70482329e42de70301
+        type: file
+        url: https://files.pythonhosted.org/packages/38/45/618e84e49a6c51e5dd15565ec2fcd82ab273434f236b8f108f065ded517a/flit_core-3.9.0-py3-none-any.whl
+
   - name: gtksourceview4
     buildsystem: meson
     sources:
-    - type: archive
-      url: https://download.gnome.org/sources/gtksourceview/4.8/gtksourceview-4.8.4.tar.xz
-      sha256: 7ec9d18fb283d1f84a3a3eff3b7a72b09a10c9c006597b3fbabbb5958420a87d
+      - type: archive
+        url: https://download.gnome.org/sources/gtksourceview/4.8/gtksourceview-4.8.4.tar.xz
+        sha256: 7ec9d18fb283d1f84a3a3eff3b7a72b09a10c9c006597b3fbabbb5958420a87d
+
   - name: skytemple
     buildsystem: simple
     build-commands:
@@ -160,19 +212,18 @@ modules:
       - install -Dm644 org.skytemple.SkyTemple.desktop /app/share/applications/org.skytemple.SkyTemple.desktop
       - install -Dm644 org.skytemple.SkyTemple.appdata.xml /app/share/metainfo/org.skytemple.SkyTemple.appdata.xml
     sources:
+      - {"type": "git", "url": "https://github.com/SkyTemple/skytemple.git", "tag": "1.8.0"}
       - type: file
-        url: https://files.pythonhosted.org/packages/d9/5f/2daccd14278b6b780ae6799f85998377c06019354982391245f4b58a927d/setuptools-65.3.0-py3-none-any.whl
-        sha256: 2e24e0bec025f035a2e72cdd1961119f557d78ad331bb00ff82efb2ab8da8e82
-        dest: ./links
-      - type: file
-        url: https://files.pythonhosted.org/packages/27/d6/003e593296a85fd6ed616ed962795b2f87709c3eee2bca4f6d0fe55c6d00/wheel-0.37.1-py2.py3-none-any.whl
-        sha256: 4bdcd7d840138086126cd09254dc6195fb4fc6f01c050a1d7236f2630db1d22a
-        dest: ./links
-      - type: archive
-        url: https://github.com/SkyTemple/skytemple/archive/refs/tags/1.6.5.tar.gz
-        sha256: 1789accef0394555364adaf1d66e96560d2b6e24decbb6818c19332fe60bef04
-      - type: file
-        url: https://raw.githubusercontent.com/SkyTemple/skytemple/master/org.skytemple.SkyTemple.appdata.xml
-        sha256: e9ab44ca870f4378a1a84c698f281009455a65eeee5e762798a2905a58cf783a
-      - type: file
-        path: run.sh
+        path: assets/run.sh
+      - dest: links
+        sha256: 032d42ee9fb536e33087fb66cac5f840eb9391ed05637b3f2a76a7c8fb477936
+        type: file
+        url: https://files.pythonhosted.org/packages/32/c0/5b8013b5a812701c72e3b1e2b378edaa6514d06bee6704a5ab0d7fa52931/setuptools-71.1.0.tar.gz
+      - dest: links
+        sha256: 465ef92c69fa5c5da2d1cf8ac40559a8c940886afcef87dcf14b9470862f1d85
+        type: file
+        url: https://files.pythonhosted.org/packages/b8/d6/ac9cd92ea2ad502ff7c1ab683806a9deb34711a1e2bd8a59814e8fc27e69/wheel-0.43.0.tar.gz
+      - dest: links
+        sha256: 7aada352fb0c7f5538c4fafeddf314d3a6a92ee8e2b1de70482329e42de70301
+        type: file
+        url: https://files.pythonhosted.org/packages/38/45/618e84e49a6c51e5dd15565ec2fcd82ab273434f236b8f108f065ded517a/flit_core-3.9.0-py3-none-any.whl
