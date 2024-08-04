@@ -1,8 +1,0 @@
---- a/ssb-emulator/setup.py
-+++ b/ssb-emulator/setup.py
-@@ -13,4 +13,4 @@
- setup(
-     name="skytemple-ssb-emulator",
--    rust_extensions=[RustExtension(f"skytemple_ssb_emulator", binding=Binding.PyO3)], # set debug=True for unoptimized build.
-+    rust_extensions=[RustExtension(f"skytemple_ssb_emulator", binding=Binding.PyO3, cargo_manifest_args=["--offline"])], # set debug=True for unoptimized build.
-     packages=["skytemple_ssb_emulator"],
