@@ -268,7 +268,7 @@ modules:
     sources:
       - type: git
         url: https://github.com/SkyTemple/skytemple.git
-        tag: 1.8.0
+        tag: 1.8.1
       - type: file
         path: assets/run.sh
       - dest: links
