@@ -12,13 +12,13 @@
             "sources": [
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/93/fd/a19345071360a94345ebecaa268d6c6f56900687d91ef775fe2496a76100/aiohappyeyeballs-2.3.4-py3-none-any.whl",
-                    "sha256": "40a16ceffcf1fc9e142fd488123b2e218abc4188cf12ac20c67200e1579baa42"
+                    "url": "https://files.pythonhosted.org/packages/8b/b4/0983e94060405eb51f23be493e3f5c28003f7ebc5efcd0803c1cb23ea407/aiohappyeyeballs-2.3.5-py3-none-any.whl",
+                    "sha256": "4d6dea59215537dbc746e93e779caea8178c866856a721c9c660d7a5a7b8be03"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/f7/e1/bfcafd54dee859b2e6e690c5f8a8a30343d590a8822bb0669afba4c2c9e6/aiohttp-3.10.1.tar.gz",
-                    "sha256": "8b0d058e4e425d3b45e8ec70d49b402f4d6b21041e674798b1f91ba027c73f28"
+                    "url": "https://files.pythonhosted.org/packages/45/11/36ba898823ab19e49e6bd791d75b9185eadef45a46fc00d3c669824df8a0/aiohttp-3.10.2.tar.gz",
+                    "sha256": "4d1f694b5d6e459352e5e925a42e05bac66655bfde44d81c59992463d2897014"
                 },
                 {
                     "type": "file",
@@ -190,13 +190,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/93/fd/a19345071360a94345ebecaa268d6c6f56900687d91ef775fe2496a76100/aiohappyeyeballs-2.3.4-py3-none-any.whl",
-                    "sha256": "40a16ceffcf1fc9e142fd488123b2e218abc4188cf12ac20c67200e1579baa42"
+                    "url": "https://files.pythonhosted.org/packages/8b/b4/0983e94060405eb51f23be493e3f5c28003f7ebc5efcd0803c1cb23ea407/aiohappyeyeballs-2.3.5-py3-none-any.whl",
+                    "sha256": "4d6dea59215537dbc746e93e779caea8178c866856a721c9c660d7a5a7b8be03"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/f7/e1/bfcafd54dee859b2e6e690c5f8a8a30343d590a8822bb0669afba4c2c9e6/aiohttp-3.10.1.tar.gz",
-                    "sha256": "8b0d058e4e425d3b45e8ec70d49b402f4d6b21041e674798b1f91ba027c73f28"
+                    "url": "https://files.pythonhosted.org/packages/45/11/36ba898823ab19e49e6bd791d75b9185eadef45a46fc00d3c669824df8a0/aiohttp-3.10.2.tar.gz",
+                    "sha256": "4d1f694b5d6e459352e5e925a42e05bac66655bfde44d81c59992463d2897014"
                 },
                 {
                     "type": "file",
@@ -293,7 +293,7 @@
             "name": "python3-skytemple-files",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"skytemple-files[spritecollab]==1.8.2\""
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"skytemple-files[spritecollab]==1.8.3\""
             ],
             "sources": [
                 {
@@ -308,13 +308,13 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/93/fd/a19345071360a94345ebecaa268d6c6f56900687d91ef775fe2496a76100/aiohappyeyeballs-2.3.4-py3-none-any.whl",
-                    "sha256": "40a16ceffcf1fc9e142fd488123b2e218abc4188cf12ac20c67200e1579baa42"
+                    "url": "https://files.pythonhosted.org/packages/8b/b4/0983e94060405eb51f23be493e3f5c28003f7ebc5efcd0803c1cb23ea407/aiohappyeyeballs-2.3.5-py3-none-any.whl",
+                    "sha256": "4d6dea59215537dbc746e93e779caea8178c866856a721c9c660d7a5a7b8be03"
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/f7/e1/bfcafd54dee859b2e6e690c5f8a8a30343d590a8822bb0669afba4c2c9e6/aiohttp-3.10.1.tar.gz",
-                    "sha256": "8b0d058e4e425d3b45e8ec70d49b402f4d6b21041e674798b1f91ba027c73f28"
+                    "url": "https://files.pythonhosted.org/packages/45/11/36ba898823ab19e49e6bd791d75b9185eadef45a46fc00d3c669824df8a0/aiohttp-3.10.2.tar.gz",
+                    "sha256": "4d1f694b5d6e459352e5e925a42e05bac66655bfde44d81c59992463d2897014"
                 },
                 {
                     "type": "file",
@@ -408,8 +408,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/82/19/7e0c5a5263d20628016af98a8eac64150bb778436e67867dd276660b3e03/skytemple_files-1.8.2-py3-none-any.whl",
-                    "sha256": "3ff5722cc1a4eff4d8e1b27a6acc40bcf6162cc5d2f972717352a20bcb7e1c58"
+                    "url": "https://files.pythonhosted.org/packages/39/3c/bf72152c68976500b46ad4874273f55b349d0167e3cdd613f0ea0aeaa88b/skytemple_files-1.8.3-py3-none-any.whl",
+                    "sha256": "803df382d4fb1e6ca1771769810e49005311c303af40128d51d2101a4971650f"
                 },
                 {
                     "type": "file",
@@ -452,7 +452,7 @@
             "name": "python3-skytemple-ssb-debugger",
             "buildsystem": "simple",
             "build-commands": [
-                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"skytemple-ssb-debugger==1.8.1\""
+                "pip3 install --verbose --exists-action=i --no-index --find-links=\"file://${PWD}\" --prefix=${FLATPAK_DEST} \"skytemple-ssb-debugger==1.8.2\""
             ],
             "sources": [
                 {
@@ -507,8 +507,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/82/19/7e0c5a5263d20628016af98a8eac64150bb778436e67867dd276660b3e03/skytemple_files-1.8.2-py3-none-any.whl",
-                    "sha256": "3ff5722cc1a4eff4d8e1b27a6acc40bcf6162cc5d2f972717352a20bcb7e1c58"
+                    "url": "https://files.pythonhosted.org/packages/39/3c/bf72152c68976500b46ad4874273f55b349d0167e3cdd613f0ea0aeaa88b/skytemple_files-1.8.3-py3-none-any.whl",
+                    "sha256": "803df382d4fb1e6ca1771769810e49005311c303af40128d51d2101a4971650f"
                 },
                 {
                     "type": "file",
@@ -517,8 +517,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/df/b7/0cf0f80b041ec25fbb5e11aa7fa44abba831c720ee0fe19c83d560e2be80/skytemple_ssb_debugger-1.8.1-py3-none-any.whl",
-                    "sha256": "aac2cb910845ffe8db43998acd5e2dfb85321204234d727e1e992137d211c752"
+                    "url": "https://files.pythonhosted.org/packages/cc/3c/53e4a6e0944eccc027323991d3ebbe9469281c9a9b98ea0c986712cef5a4/skytemple_ssb_debugger-1.8.2-py3-none-any.whl",
+                    "sha256": "92a3c86abcb088bf319a72371e85de1e5b0492494aa77543173c808826633421"
                 },
                 {
                     "type": "file",
@@ -620,8 +620,8 @@
                 },
                 {
                     "type": "file",
-                    "url": "https://files.pythonhosted.org/packages/82/19/7e0c5a5263d20628016af98a8eac64150bb778436e67867dd276660b3e03/skytemple_files-1.8.2-py3-none-any.whl",
-                    "sha256": "3ff5722cc1a4eff4d8e1b27a6acc40bcf6162cc5d2f972717352a20bcb7e1c58"
+                    "url": "https://files.pythonhosted.org/packages/39/3c/bf72152c68976500b46ad4874273f55b349d0167e3cdd613f0ea0aeaa88b/skytemple_files-1.8.3-py3-none-any.whl",
+                    "sha256": "803df382d4fb1e6ca1771769810e49005311c303af40128d51d2101a4971650f"
                 },
                 {
                     "type": "file",
