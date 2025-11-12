@@ -170,7 +170,7 @@ modules:
       - sha256: 66e5b87874a0d6e39691f0e22f09306736b633548670ad3c09ec9db03c5662f7
         type: file
         url: https://files.pythonhosted.org/packages/d5/ae/09427bea9227a33ec834ed5461432752fd5d02b14f93dd68406c91684622/flit_core-3.10.1.tar.gz
-      - {"type": "git", "url": "https://github.com/SkyTemple/explorerscript.git", "tag": "0.2.2", "dest": "explorerscript"}
+      - {"type": "git", "url": "https://github.com/SkyTemple/explorerscript.git", "tag": "0.2.4", "commit": "c7728b7225490f3f9448f9770ae9b1e5de00db52", "dest": "explorerscript"}
       - type: file
         url: https://files.pythonhosted.org/packages/b8/8e/8810c9ccdef97c614423ca82fca693608db9546a1a9716671035e3630499/igraph-0.11.8.tar.gz
         sha256: d7dc1404567ba3b0ea1bf8b5fa6e101617915c8ad11ea5a9f925a40bf4adad7d
